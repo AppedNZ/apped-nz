@@ -1,0 +1,23 @@
+@import "./variables.scss";
+.OurTrustedClients {
+  padding-bottom: 80px;
+  .Brief {
+    margin: 24px 0;
+  }
+  &__clients-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    place-content: center;
+    column-gap: 20px;
+  }
+  @media (min-width: 1024px) {
+    &__clients-grid {
+      column-gap: 80px;
+    }
+  }
+  @media (min-width: 1280px) {
+    &__clients-grid {
+      column-gap: 100px;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import "./variables.scss";
+.GetInTouch {
+  .Brief {
+    margin: 24px 0;
+  }
+  &__contacts {
+    padding-bottom: 70px;
+  }
+  &__contactTypes {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    row-gap: 24px;
+  }
+  &__contact {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1;
+    color: white;
+    column-gap: 12px;
+    display: flex;
+    align-items: center;
+  }
+  &__contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    .inputWrapper {
+      position: relative;
+      height: 56px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1;
+    }
+    .text-area {
+      padding: 16px 20px;
+      height: 100%;
+      width: 100%;
+      caret-color: $blue;
+      &:focus {
+        outline: none;
+      }
+    }
+    img {
+      position: absolute;
+      width: auto;
+      height: auto;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+    input {
+      padding: 16px 20px;
+      height: 100%;
+      width: 100%;
+      caret-color: $blue;
+      &:focus {
+        outline: none;
+      }
+    }
+    .button-submit {
+      width: 100%;
+      height: 56px;
+      border: 2px solid white;
+      color: white;
+      font-weight: 800;
+      text-transform: uppercase;
+      :disabled {
+        background-color: transparent;
+        border: 2px solid white;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+  }
+  @media (min-width: 1280px) {
+  }
+}

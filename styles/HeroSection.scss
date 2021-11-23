@@ -1,0 +1,63 @@
+@import "./variables.scss";
+.HeroSection {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-bottom: 80px;
+  &__container {
+    width: 80%;
+  }
+  &__heading {
+    font-size: 40px;
+    line-height: 1;
+    color: white;
+    font-weight: 800;
+    letter-spacing: 2%;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  &__brief {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .Button {
+    width: 80%;
+    margin: 16px 0;
+  }
+  &__weDevelopFor {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 0.92fr 1fr;
+    column-gap: 12px;
+  }
+  @media (min-width: 768px) {
+    padding-top: 100px;
+    padding-bottom: 120px;
+    &__container {
+      width: 528px;
+      max-width: 528px;
+    }
+    &__heading {
+      font-size: 70px;
+    }
+    &__weDevelopFor {
+      display: flex;
+    }
+    .Brief {
+      width: 80%;
+    }
+  }
+  @media (min-width: 1280px) {
+    &__container {
+      width: 676px;
+      max-width: 676px;
+      flex-shrink: 0;
+    }
+    &__heading {
+      font-size: 90px;
+    }
+  }
+}

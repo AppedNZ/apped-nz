@@ -1,0 +1,29 @@
+@import "./variables.scss";
+.Heading {
+  text-align: center;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  &.center {
+    text-align: center;
+  }
+  &.big {
+    font-weight: 800;
+  }
+
+  @media (min-width: 1024px) {
+    &.big {
+      font-size: 48px;
+    }
+    &.left {
+      text-align: left;
+    }
+  }
+  @media (min-width: 1280px) {
+    &.big {
+      font-size: 56px;
+    }
+  }
+}

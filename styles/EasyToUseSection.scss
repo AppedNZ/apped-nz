@@ -1,0 +1,14 @@
+@import "./variables.scss";
+.EasyToUseSection {
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .Brief {
+    margin: 24px 0;
+  }
+  @media (min-width: 1024px) {
+  }
+  @media (min-width: 1280px) {
+  }
+}

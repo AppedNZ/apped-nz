@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "./variables.scss";
+@import "./Header.scss";
+@import "./HeroSection.scss";
+@import "./Button.scss";
+@import "./Heading.scss";
+@import "./Services.scss";
+@import "./ExampleSection.scss";
+@import "./Slider.scss";
+@import "./EasyToUseSection.scss";
+@import "./OurTrustedClients.scss";
+@import "./WhatClientsSay.scss";
+@import "./GetInTouch.scss";
+@import "./Footer.scss";
+@import "./Socials.scss";
+@import "./PhonesGrid.scss";
+body {
+  font-family: "Blinker", sans-serif;
+  overflow-x: hidden;
+  background: #054a85;
+}
+.my-container {
+  padding: 0 40px;
+  width: 100%;
+  margin: 0 auto;
+}
+.Brief {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: white;
+  font-size: 10px;
+  line-height: 18px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .my-container {
+  }
+  .Brief {
+    font-size: 14px;
+    text-align: left;
+    line-height: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .my-container {
+    max-width: 944px;
+  }
+}
+@media (min-width: 1280px) {
+  .my-container {
+    max-width: 1160px;
+  }
+}

@@ -1,0 +1,103 @@
+@import "./variables.scss";
+.Slider {
+  padding-bottom: 10px;
+  .swiper {
+    padding: 24px 0 40px 0;
+  }
+  .swiper-slide {
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+  }
+  .swiper-slide-next,
+  .swiper-slide-prev {
+    filter: grayscale(1);
+  }
+  .swiper-slide-active {
+    filter: grayscale(0);
+  }
+  .swiper-slide-next,
+  .swiper-slide-prev,
+  .swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .swiper-pagination-bullet {
+    width: min(10%, 32px);
+    height: 4px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    &-active {
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+  &__button {
+    position: absolute;
+    top: 48%;
+    transform: translateY(-60%);
+    z-index: 5;
+    background: radial-gradient(
+      circle,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgba(0, 0, 0, 0) 72%
+    );
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  &__next {
+    right: 0;
+  }
+  &__prev {
+    left: 0;
+    transform: translateY(-60%) rotate(180deg);
+  }
+  @media (min-width: 1024px) {
+    &__next {
+      right: 0;
+      transform: translateX(-100%) translateY(-60%);
+    }
+    &__prev {
+      left: 0;
+      transform: translateX(100%) translateY(-60%) rotate(180deg);
+    }
+    .swiper-slide-shadow-left,
+    .swiper-slide-shadow-right {
+      background: none !important;
+    }
+    .swiper-slide {
+      opacity: 0;
+    }
+    .swiper-slide-visible {
+      overflow: hidden;
+      transition: all 0.3s;
+      display: flex;
+      justify-content: center;
+      filter: grayscale(1);
+      opacity: 1;
+    }
+
+    .swiper-slide-active {
+      opacity: 1;
+      filter: grayscale(0);
+    }
+    .swiper-slide-next {
+      opacity: 1;
+    }
+    .swiper-slide-prev {
+      opacity: 1;
+    }
+    // .swiper-slide {
+    //   opacity: 0;
+    //   filter: grayscale(0);
+    // }
+    .swiper-slide-active,
+    .swiper-slide-next,
+    .swiper-slide-prev {
+      opacity: 1;
+    }
+  }
+  @media (min-width: 1280px) {
+  }
+}
