@@ -11,6 +11,10 @@
     column-gap: 20px;
   }
   @media (min-width: 1024px) {
+    .Brief {
+      text-align: center;
+      margin: 24px 0;
+    }
     &__clients-grid {
       column-gap: 80px;
     }

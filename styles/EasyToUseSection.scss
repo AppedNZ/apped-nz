@@ -4,10 +4,35 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  .MacSlider {
+    border-radius: 2px;
+    overflow: hidden;
+    top: 56%;
+    left: 50%;
+    transform: translateX(-49.7%) translateY(-52%);
+    width: 82.5%;
+    height: 100%;
+  }
   .Brief {
     margin: 24px 0;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
+    flex-direction: row;
+    column-gap: 20px;
+    &__laptop {
+      width: 51%;
+    }
+    &__content {
+      width: 49%;
+    }
+    .Brief {
+      margin: 16px 0 0 0;
+    }
+    .Heading {
+      font-weight: 700;
+      text-align: left;
+      font-size: 40px;
+    }
   }
   @media (min-width: 1280px) {
   }

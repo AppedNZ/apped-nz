@@ -1,6 +1,125 @@
 @import "./variables.scss";
 .WhatClientsSay {
+  padding-bottom: 80px;
+  .Slider .swiper {
+    padding: 0;
+  }
+  .Slider__prev,
+  .Slider__next {
+    top: 30%;
+    transform: translateX(0%) translateY(-60%);
+  }
+  .Slider__prev {
+    transform: translateX(0%) translateY(-60%) rotate(180deg);
+  }
+  .Brief {
+    opacity: 0;
+    transition: opacity 0.4s 0.5s;
+  }
+  .swiper-slide-active {
+    .clients-slide {
+      .slide-screens {
+        .screen1 {
+          transform: translateY(-50%) translateX(-50%) scale(0.9);
+        }
+        .screen3 {
+          transform: translateY(-50%) translateX(50%) scale(0.9);
+        }
+      }
+      .Brief {
+        opacity: 1;
+      }
+    }
+  }
+  .clients-slide {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    .slide-screens {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      max-width: 300px;
+      position: relative;
+      .screen2 {
+        width: 70%;
+        position: relative;
+        z-index: 2;
+      }
+      .screen1,
+      .screen3 {
+        position: absolute;
+        width: 60%;
+        top: 50%;
+        transition: all 0.4s 0.5s;
+      }
+      .screen1 {
+        transform: translateY(-50%) translateX(0%) scale(0.5);
+      }
+      .screen3 {
+        transform: translateY(-50%) translateX(0%) scale(0.5);
+      }
+    }
+  }
+  .slide-comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .Brief {
+      margin-top: 16px;
+      line-height: 2.5;
+    }
+    .about {
+      padding-top: 24px;
+      display: flex;
+      column-gap: 24px;
+      align-items: center;
+      .app-name {
+        font-family: "Montserrat", sans-serif;
+        color: $blue;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      .client-avatar {
+        width: 32px;
+        height: 32px;
+      }
+      .client-name {
+        font-size: 12px;
+      }
+    }
+  }
   @media (min-width: 1024px) {
+    .Slider__prev,
+    .Slider__next {
+      top: 50%;
+    }
+    .clients-slide {
+      width: 80%;
+      margin: 0 auto;
+      grid-template-columns: 1fr 1.5fr;
+      column-gap: 40px;
+      .slide-screens {
+        width: 85%;
+        max-width: unset;
+        // .screen1 {
+        //   transform: translateY(-50%) translateX(-50%) scale(0.8);
+        // }
+        // .screen3 {
+        //   transform: translateY(-50%) translateX(50%) scale(0.8);
+        // }
+      }
+    }
+    .slide-comment {
+      align-items: flex-start;
+      .app-name {
+        font-size: 24px;
+      }
+    }
   }
   @media (min-width: 1280px) {
   }

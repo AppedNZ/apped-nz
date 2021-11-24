@@ -94,14 +94,14 @@ export default function GetInTouch() {
               <img src={input.icon} alt={input.inputProps.name} />
             </div>
           ))}
-          <div className="inputWrapper w-full">
+          <div className="inputWrapper w-full comment wide">
             <textarea
               className="resize-none w-full text-area"
               rows={4}
               placeholder="What do you need the app to do?"
             />
           </div>
-          <button type="submit" className={`button-submit`}>
+          <button type="submit" className={`button-submit wide`}>
             Get a quote
           </button>
         </form>

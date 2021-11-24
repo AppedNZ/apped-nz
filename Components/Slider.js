@@ -12,6 +12,17 @@ import SwiperCore, { EffectCoverflow, Pagination, Autoplay, Navigation } from "s
 
 // install Swiper modules
 SwiperCore.use([EffectCoverflow, Pagination, Autoplay, Navigation]);
+const slides = [
+  "/assets/apps/airport.png",
+  "/assets/apps/bookitin247.png",
+  "/assets/apps/eggs.png",
+  "/assets/apps/food_truck.png",
+  "/assets/apps/harwood.png",
+  "/assets/apps/loyalty.png",
+  "/assets/apps/map.png",
+  "/assets/apps/olympus.png",
+  "/assets/apps/openHomes.png",
+];
 export default function Slider({ idx = 1 }) {
   const [sliderProps, setSlideProps] = useState(null);
   useEffect(() => {
@@ -52,17 +63,13 @@ export default function Slider({ idx = 1 }) {
       />
       {sliderProps && (
         <Swiper
-          onSlideChange={() => {
-            const slides = document.querySelectorAll(".swiper-slide");
-            console.dir(slides);
-          }}
           navigation={{
             nextEl: `#slider_next${idx}`,
             prevEl: `#slider_prev${idx}`,
           }}
           autoplay={{ delay: 2500 }}
-          effect={"coverflow"}
           grabCursor={true}
+          effect={"coverflow"}
           centeredSlides={true}
           {...sliderProps}
           speed={300}
@@ -70,41 +77,13 @@ export default function Slider({ idx = 1 }) {
           pagination={true}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <div className="slide">
-              <img src="/assets/phone_app.png" alt="app example" />
-            </div>
-          </SwiperSlide>{" "}
-          <SwiperSlide>
-            <div className="slide">
-              <img src="/assets/phone_app.png" alt="app example" />
-            </div>
-          </SwiperSlide>{" "}
-          <SwiperSlide>
-            <div className="slide">
-              <img src="/assets/phone_app.png" alt="app example" />
-            </div>
-          </SwiperSlide>{" "}
-          <SwiperSlide>
-            <div className="slide">
-              <img src="/assets/phone_app.png" alt="app example" />
-            </div>
-          </SwiperSlide>{" "}
-          <SwiperSlide>
-            <div className="slide">
-              <img src="/assets/phone_app.png" alt="app example" />
-            </div>
-          </SwiperSlide>{" "}
-          <SwiperSlide>
-            <div className="slide">
-              <img src="/assets/phone_app.png" alt="app example" />
-            </div>
-          </SwiperSlide>{" "}
-          <SwiperSlide>
-            <div className="slide">
-              <img src="/assets/phone_app.png" alt="app example" />
-            </div>
-          </SwiperSlide>{" "}
+          {slides.map((s, i) => (
+            <SwiperSlide key={i}>
+              <div className="slide">
+                <img src={s} alt="app example" />
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
       )}
     </div>
