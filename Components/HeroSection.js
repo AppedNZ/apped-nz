@@ -2,6 +2,7 @@ import React from "react";
 import Brief from "./Brief";
 import Button from "./Button";
 import PhonesGrid from "./PhonesGrid";
+import { motion } from "framer-motion";
 const HS = "HeroSection";
 export default function HeroSection() {
   return (
@@ -12,7 +13,18 @@ export default function HeroSection() {
             Need a <br className="lg:hidden" />
             mobile <span className="text-blue">app</span>
             <br className="lg:hidden" />
-            <span className="text-blue"> developed?</span>
+            <span className="text-blue">
+              {" "}
+              developed
+              <motion.span
+                className="inline-block relative"
+                initial={{ scale: 1 }}
+                animate={{ scale: 3, left: "10%", y: "-55%" }}
+                transition={{ delay: 2.5 }}
+              >
+                ?
+              </motion.span>
+            </span>
           </p>
           <Brief
             text={`We are a New Zealand App developmzent agency building

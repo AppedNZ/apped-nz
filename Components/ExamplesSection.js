@@ -12,7 +12,7 @@ export default function ExamplesSection() {
           Examples of <br className="lg:hidden" />{" "}
           <span className="text-blue">our apps</span>
         </Heading>
-        <div className={`${ES}__slider relative`}>
+        <div id="portfolio" className={`${ES}__slider relative`}>
           <Slider />
         </div>
         <div className="flex flex-col md:flex-row gap-10">

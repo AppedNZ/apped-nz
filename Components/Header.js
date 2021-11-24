@@ -1,41 +1,69 @@
 import React from "react";
-// import styles from "../styles/Header.module.scss";
+import Burger from "./Burger";
+import { Link } from "react-scroll";
+const linkProps = {
+  spy: true,
+  smooth: true,
+  offset: -200,
+  duration: 600,
+  delay: 100,
+  activeClass: "active",
+  className: "cursor-pointer link",
+};
 const anchors = [
   {
-    href: "#services",
+    href: "services",
     text: "services",
   },
   {
-    href: "#portfolio",
+    href: "portfolio",
     text: "portfolio",
   },
   {
-    href: "#contact",
+    href: "contact",
     text: "contact",
   },
 ];
-export default function Header({ scrolled }) {
+export default function Header({ scrolled, showMenu, setShowMenu }) {
   return (
     <div className={`Header ${scrolled ? "scrolled" : ""}`}>
       <div className="my-container ">
         <div
           className={`Header__itemsWrapper flex justify-between items-center  ${
-            scrolled ? "scrolled" : ""
+            scrolled || showMenu ? "scrolled" : ""
           }`}
         >
-          <img className="Header__logo" src="/assets/logo.svg" alt="Apped NZ" />
-          <button className="Header__menuButton">
-            Menu <img src="/assets/burger.svg" alt="menu" />
+          <Link style={{ width: 94, display: "inline-block" }} {...linkProps} to="top">
+            <img className="Header__logo" src="/assets/logo.svg" alt="Apped NZ" />
+          </Link>
+          <button
+            onClick={() => {
+              setShowMenu((prev) => !prev);
+            }}
+            className="Header__menuButton"
+          >
+            Menu
+            <Burger showMenu={showMenu} />
+            {/* <img src="/assets/burger.svg" alt="menu" /> */}
           </button>
           <div className="Header__menuItems">
-            {anchors.map((a, i) => (
-              <a href={a.href}>{a.text}</a>
+            {anchors.map((anchor, i) => (
+              <Link
+                to={anchor.href}
+                {...linkProps}
+                onClick={() => {
+                  setShowMenu(false);
+                }}
+              >
+                {anchor.text}
+              </Link>
             ))}
-            <button className="uppercase leading-none py-2.5 px-4 bg-blue text-white font-bold">
+            <button className="client uppercase leading-none py-2.5 px-4 bg-blue text-white font-bold">
               client area
             </button>
-            <a className="leading-none text-base" href="phone:0800726543">
-              0800 726 543
+            <a className="leading-none text-base phone relative" href="phone:0800726543">
+              <span className="number"> 0800 726 543</span>{" "}
+              <img className="phone-icon" src="/assets/phone.svg" alt="make a call" />
             </a>
           </div>
         </div>

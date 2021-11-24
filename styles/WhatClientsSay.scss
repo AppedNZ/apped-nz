@@ -3,10 +3,12 @@
   padding-bottom: 80px;
   .Slider .swiper {
     padding: 0;
+    padding-bottom: 40px;
   }
+
   .Slider__prev,
   .Slider__next {
-    top: 30%;
+    top: 25%;
     transform: translateX(0%) translateY(-60%);
   }
   .Slider__prev {

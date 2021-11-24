@@ -57,59 +57,57 @@
       position: absolute;
       transform: rotate(45deg) translateY(54%) translateX(-85%);
     }
-    .phone:nth-of-type(1) {
-      left: 0%;
-      transform: translateY(80%) translateX(-53%) rotate(90deg);
-    }
-    .phone:nth-of-type(2) {
-      left: 16%;
-      transform: translateY(0%);
-    }
-    .phone:nth-of-type(3) {
-      left: 32%;
-      transform: translateY(-50%);
-    }
-    .phone:nth-of-type(4) {
-      left: 0%;
-      transform: translateY(160%);
-    }
-    .phone:nth-of-type(5) {
-      left: 16%;
-      transform: translateY(105%);
-    }
-    .phone:nth-of-type(6) {
-      left: 32%;
-      transform: translateY(55%);
-    }
+    // .phone:nth-of-type(1) {
+    //   left: 0%;
+    //   transform: translateY(80%) translateX(-53%) rotate(90deg);
+    // }
+    // .phone:nth-of-type(2) {
+    //   left: 16%;
+    //   transform: translateY(0%);
+    // }
+    // .phone:nth-of-type(3) {
+    //   left: 32%;
+    //   transform: translateY(-50%);
+    // }
+    // .phone:nth-of-type(4) {
+    //   left: 0%;
+    //   transform: translateY(160%);
+    // }
+    // .phone:nth-of-type(5) {
+    //   left: 16%;
+    //   transform: translateY(105%);
+    // }
+    // .phone:nth-of-type(6) {
+    //   left: 32%;
+    //   transform: translateY(55%);
+    // }
   }
   @media (min-width: 1024px) {
-    // height: 200%;
-
     transform: rotate(-45deg) translateX(10%) translateY(-107%);
 
-    .phone:nth-of-type(1) {
-      left: 0%;
-      transform: translateY(80%) translateX(-53%) rotate(90deg);
-    }
-    .phone:nth-of-type(2) {
-      left: 16%;
-      transform: translateY(0%);
-    }
-    .phone:nth-of-type(3) {
-      left: 32%;
-      transform: translateY(-50%);
-    }
-    .phone:nth-of-type(4) {
-      left: 0%;
-      transform: translateY(160%);
-    }
-    .phone:nth-of-type(5) {
-      left: 16%;
-      transform: translateY(105%);
-    }
-    .phone:nth-of-type(6) {
-      left: 32%;
-      transform: translateY(55%);
-    }
+    // .phone:nth-of-type(1) {
+    //   left: 0%;
+    //   transform: translateY(80%) translateX(-53%) rotate(90deg);
+    // }
+    // .phone:nth-of-type(2) {
+    //   left: 16%;
+    //   transform: translateY(0%);
+    // }
+    // .phone:nth-of-type(3) {
+    //   left: 32%;
+    //   transform: translateY(-50%);
+    // }
+    // .phone:nth-of-type(4) {
+    //   left: 0%;
+    //   transform: translateY(160%);
+    // }
+    // .phone:nth-of-type(5) {
+    //   left: 16%;
+    //   transform: translateY(105%);
+    // }
+    // .phone:nth-of-type(6) {
+    //   left: 32%;
+    //   transform: translateY(55%);
+    // }
   }
 }

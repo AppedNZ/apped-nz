@@ -9,11 +9,11 @@ import HeroSection from "../Components/HeroSection";
 import OurTrustedClients from "../Components/OurTrustedClients";
 import Services from "../Components/Services";
 import WhatClientsSay from "../Components/WhatClientsSay";
-import PhonesGrid from "../Components/PhonesGrid";
-// import "../styles/Header.css";
+import ModalMenu from "../Components/ModalMenu";
+
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
-
+  const [showMenu, setShowMenu] = useState(false);
   const handleScroll = (e) => {
     if (e.target.scrollingElement.scrollTop < 10) setScrolled(false);
     if (e.target.scrollingElement.scrollTop >= 10) setScrolled(true);
@@ -33,9 +33,9 @@ export default function Home() {
         <meta name="description" content="App Development" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header scrolled={scrolled} />
-      <div className="relative pt-[100px] overflow-hidden">
-        {/* <PhonesGrid /> */}
+      <Header showMenu={showMenu} setShowMenu={setShowMenu} scrolled={scrolled} />
+      <ModalMenu showMenu={showMenu} setShowMenu={setShowMenu} />
+      <div id="top" className="relative pt-[100px] overflow-hidden">
         <img
           className="top-0 left-0 absolute w-full h-full object-cover z-0 pointer-events-none"
           src="/assets/waves-pattern.png"

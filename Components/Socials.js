@@ -34,7 +34,7 @@ export default function Socials() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <g clip-path="url(#clip0_191_2645)">
+          <g clipPath="url(#clip0_191_2645)">
             <path
               fillRule="evenodd"
               clipRule="evenodd"

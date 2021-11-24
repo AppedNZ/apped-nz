@@ -12,7 +12,58 @@ import SwiperCore, { Autoplay, Navigation } from "swiper";
 
 // install Swiper modules
 SwiperCore.use([Autoplay, Navigation]);
-
+const slides = [
+  {
+    screens: [
+      "/assets/comments/showday1.png",
+      "/assets/comments/showday2.png",
+      "/assets/comments/showday3.png",
+    ],
+    name: "Show Day",
+    comment: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
+    author: `Sergey Golodyaev`,
+  },
+  {
+    screens: [
+      "/assets/comments/victor1.png",
+      "/assets/comments/victor2.png",
+      "/assets/comments/victor3.png",
+    ],
+    name: "Victor",
+    comment: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
+    author: `Sergey Golodyaev`,
+  },
+  {
+    screens: [
+      "/assets/comments/nutrition1.png",
+      "/assets/comments/nutrition2.png",
+      "/assets/comments/nutrition3.png",
+    ],
+    name: "Champion nutrition",
+    comment: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
+    author: `Sergey Golodyaev`,
+  },
+  {
+    screens: [
+      "/assets/comments/zespri1.png",
+      "/assets/comments/zespri2.png",
+      "/assets/comments/zespri3.png",
+    ],
+    name: "Zespri",
+    comment: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
+    author: `Sergey Golodyaev`,
+  },
+  {
+    screens: [
+      "/assets/comments/tulloch1.png",
+      "/assets/comments/tulloch2.png",
+      "/assets/comments/tulloch3.png",
+    ],
+    name: "Tulloch",
+    comment: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
+    author: `Sergey Golodyaev`,
+  },
+];
 export default function ClientSlider({ idx = 2 }) {
   return (
     <div className="Slider relative">
@@ -34,7 +85,7 @@ export default function ClientSlider({ idx = 2 }) {
           nextEl: `#slider_next2`,
           prevEl: `#slider_prev2`,
         }}
-        // autoplay={{ delay: 2500 }}
+        autoplay={{ delay: 4500, pauseOnMouseEnter: false }}
         grabCursor={true}
         centeredSlides={true}
         slidesPerView={1}
@@ -43,52 +94,40 @@ export default function ClientSlider({ idx = 2 }) {
         pagination={true}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <div className="clients-slide">
-            <div className="slide-screens">
-              <img
-                className="screen1"
-                src="/assets/comments/showday1.png"
-                alt="showday app"
-              />
-              <img
-                className="screen2"
-                src="/assets/comments/showday2.png"
-                alt="showday app"
-              />
-              <img
-                className="screen3"
-                src="/assets/comments/showday3.png"
-                alt="showday app"
-              />
-            </div>
-            <div className="slide-comment">
-              <div className="about">
-                <div className="app-name">Show day</div>
-                <div className="client-bio flex items-center gap-2.5">
-                  <img
-                    className="client-avatar"
-                    src="/assets/comments/showday-avatar.png"
-                    alt="client avatar"
-                  />
-                  <div>
-                    <p className="client-name text-white">Sergey Golodyaev</p>
-                    <div className="client-rating flex gap-px">
-                      <img className="star" src="/assets/star.svg" alt="rating-star" />
-                      <img className="star" src="/assets/star.svg" alt="rating-star" />
-                      <img className="star" src="/assets/star.svg" alt="rating-star" />
-                      <img className="star" src="/assets/star.svg" alt="rating-star" />
-                      <img className="star" src="/assets/star.svg" alt="rating-star" />
+        {slides.map((s, i) => (
+          <SwiperSlide key={i}>
+            <div className="clients-slide">
+              <div className="slide-screens">
+                <img className="screen1" src={s.screens[0]} alt={s.name + " app"} />
+                <img className="screen2" src={s.screens[1]} alt={s.name + " app"} />
+                <img className="screen3" src={s.screens[2]} alt={s.name + " app"} />
+              </div>
+              <div className="slide-comment">
+                <div className="about">
+                  <div className="app-name">{s.name}</div>
+                  <div className="client-bio flex items-center gap-2.5">
+                    <img
+                      className="client-avatar"
+                      src="/assets/comments/showday-avatar.png"
+                      alt="client avatar"
+                    />
+                    <div>
+                      <p className="client-name text-white">{s.author}</p>
+                      <div className="client-rating flex gap-px">
+                        <img className="star" src="/assets/star.svg" alt="rating-star" />
+                        <img className="star" src="/assets/star.svg" alt="rating-star" />
+                        <img className="star" src="/assets/star.svg" alt="rating-star" />
+                        <img className="star" src="/assets/star.svg" alt="rating-star" />
+                        <img className="star" src="/assets/star.svg" alt="rating-star" />
+                      </div>
                     </div>
                   </div>
                 </div>
+                <Brief text={s.comment} />
               </div>
-              <Brief
-                text={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`}
-              />
             </div>
-          </div>
-        </SwiperSlide>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

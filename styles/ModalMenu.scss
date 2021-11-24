@@ -1,0 +1,31 @@
+.ModalMenu {
+  position: fixed;
+  top: 0;
+  left: -110vh;
+  height: 100vh;
+  width: 100vw;
+
+  background: $navy;
+  transition: all 0.3s;
+  pointer-events: none;
+  padding: 100px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  align-items: center;
+  color: white;
+  z-index: 20;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 24px;
+  .Socials {
+    margin-top: auto;
+  }
+  &.active {
+    left: 0;
+    pointer-events: auto;
+  }
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}

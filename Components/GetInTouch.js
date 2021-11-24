@@ -83,6 +83,7 @@ export default function GetInTouch() {
           </div>
         </div>
         <form
+          id="contact"
           onSubmit={(e) => {
             e.preventDefault;
           }}
