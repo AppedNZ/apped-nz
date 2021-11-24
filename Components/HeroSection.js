@@ -3,8 +3,10 @@ import Brief from "./Brief";
 import Button from "./Button";
 import PhonesGrid from "./PhonesGrid";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const HS = "HeroSection";
 export default function HeroSection() {
+  const { ref, inView } = useInView();
   return (
     <div className={HS}>
       <div className="my-container relative">
@@ -17,9 +19,10 @@ export default function HeroSection() {
               {" "}
               developed
               <motion.span
+                ref={ref}
                 className="inline-block relative"
                 initial={{ scale: 1 }}
-                animate={{ scale: 3, left: "10%", y: "-55%" }}
+                animate={inView ? { scale: 3, left: "10%", y: "-55%" } : { scale: 1 }}
                 transition={{ delay: 2.5 }}
               >
                 ?
