@@ -96,19 +96,6 @@ export default function GetInTouch() {
         },
       },
     },
-    {
-      icon: "/assets/inputs/budget.svg",
-      inputProps: {
-        name: "budget",
-        type: "text",
-        required: false,
-        placeholder: "Budget",
-        value: budget,
-        onChange: (e) => {
-          setBudget(e.target.value);
-        },
-      },
-    },
   ];
   return (
     <div className="my-container relative">
@@ -173,6 +160,28 @@ export default function GetInTouch() {
               <img src={input.icon} alt={input.inputProps.name} />
             </div>
           ))}
+
+          <div className="inputWrapper">
+            <img src="/assets/inputs/budget.svg" alt="budget" />
+            <select
+              required
+              placeholder="Choose Budget"
+              value={budget}
+              onChange={(e) => {
+                setBudget(e.target.value);
+              }}
+            >
+              {" "}
+              <option value="" disabled selected>
+                Choose Your Budget
+              </option>
+              <option value="Under $5K">Under $5K</option>
+              <option value="$5K to $10K">$5K to $10K</option>
+              <option value="$10K - $20K">$10K - $20K</option>
+              <option value="$20K - $30K">$20K - $30K</option>
+              <option value="More than $30K">More than $30K</option>
+            </select>
+          </div>
           <div className="inputWrapper w-full comment wide">
             <textarea
               value={message}
