@@ -50,6 +50,14 @@
       transform: scale(1.1) translateY(-5%);
     }
   }
+  .scrolled {
+    .link {
+      &:hover {
+        color: $navy;
+        transform: scale(1.1) translateY(-5%);
+      }
+    }
+  }
   .phone {
     .phone-icon {
       opacity: 0;

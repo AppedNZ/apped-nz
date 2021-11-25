@@ -4,6 +4,7 @@ import Heading from "./Heading";
 import Brief from "./Brief";
 import Button from "./Button";
 import { Link } from "react-scroll";
+import Tiles from "./Tiles";
 const ES = "ExampleSection";
 export default function ExamplesSection() {
   const linkProps = {
@@ -21,9 +22,10 @@ export default function ExamplesSection() {
           Examples of <br className="lg:hidden" />{" "}
           <span className="text-blue">our apps</span>
         </Heading>
-        <div id="portfolio" className={`${ES}__slider relative`}>
+        <Tiles />
+        {/* <div id="portfolio" className={`${ES}__slider relative`}>
           <Slider />
-        </div>
+        </div> */}
         <div className="grid md:grid-cols-[3fr,2fr]  md:gap-10">
           <Brief
             text={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the `}
