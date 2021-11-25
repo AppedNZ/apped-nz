@@ -18,7 +18,19 @@ export default function OurTrustedClients() {
   };
   const item = { show: { x: 0, opacity: 1 }, hidden: { x: -100, opacity: 0 } };
   return (
-    <div className="my-container">
+    <div className="my-container relative">
+      <img
+        style={{ animationDelay: "1.3s" }}
+        className="bubble w-1/12 h-auto absolute top-10 left-0"
+        src="/assets/bubble.svg"
+        alt="bubble"
+      />{" "}
+      <img
+        style={{ animationDelay: "2.3s" }}
+        className="bubble w-1/6 h-auto absolute top-[45%] right-0"
+        src="/assets/bubble.svg"
+        alt="bubble"
+      />{" "}
       <div className={OTC}>
         <Heading>
           Our <span className="text-blue">Trusted </span> Clients

@@ -1,10 +1,13 @@
 @import "./variables.scss";
 .OurTrustedClients {
   padding-bottom: 80px;
+
   .Brief {
     margin: 24px 0;
   }
   &__clients-grid {
+    position: relative;
+    z-index: 4;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     place-content: center;

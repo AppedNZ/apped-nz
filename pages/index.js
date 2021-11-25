@@ -10,6 +10,7 @@ import OurTrustedClients from "../Components/OurTrustedClients";
 import Services from "../Components/Services";
 import WhatClientsSay from "../Components/WhatClientsSay";
 import ModalMenu from "../Components/ModalMenu";
+import Bubbles from "../Components/Bubbles";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
@@ -27,12 +28,13 @@ export default function Home() {
     };
   }, []);
   return (
-    <div>
+    <div className="relative">
       <Head>
         <title>Apped NZ</title>
         <meta name="description" content="App Development" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Bubbles />
       <Header showMenu={showMenu} setShowMenu={setShowMenu} scrolled={scrolled} />
       <ModalMenu showMenu={showMenu} setShowMenu={setShowMenu} />
       <div id="top" className="relative pt-[100px] overflow-hidden">

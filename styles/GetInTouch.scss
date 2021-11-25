@@ -1,5 +1,7 @@
 @import "./variables.scss";
 .GetInTouch {
+  position: relative;
+  z-index: 4;
   .Brief {
     margin: 24px 0;
   }

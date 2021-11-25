@@ -1,5 +1,7 @@
 @import "./variables.scss";
 .Tiles {
+  position: relative;
+  z-index: 4;
   padding: 20px 0;
   display: grid;
   gap: 10px;

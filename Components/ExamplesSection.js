@@ -17,6 +17,30 @@ export default function ExamplesSection() {
   };
   return (
     <div className="my-container relative">
+      <img
+        style={{ animationDelay: " 2.6s" }}
+        className="bubble w-1/12 h-auto absolute top-0 right-4"
+        src="/assets/bubble.svg"
+        alt="bubble"
+      />{" "}
+      <img
+        style={{ animationDelay: "1.3s" }}
+        className="bubble w-1/12 h-auto absolute top-10 left-0"
+        src="/assets/bubble.svg"
+        alt="bubble"
+      />{" "}
+      <img
+        style={{ animationDelay: "2.3s" }}
+        className="bubble w-1/6 h-auto absolute top-[45%] left-0"
+        src="/assets/bubble.svg"
+        alt="bubble"
+      />{" "}
+      <img
+        style={{ animationDelay: "1.4s" }}
+        className="bubble w-1/8 h-auto absolute top-[55%] right-0"
+        src="/assets/bubble.svg"
+        alt="bubble"
+      />
       <div className={ES}>
         <Heading>
           Examples of <br className="lg:hidden" />{" "}
