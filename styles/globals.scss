@@ -21,6 +21,12 @@ body {
   font-family: "Blinker", sans-serif;
   overflow-x: hidden;
   background: #054a85;
+  @media (min-width: 1920px) {
+    transform: scale(1.3);
+    position: relative;
+
+    transform-origin: center top;
+  }
 }
 .my-container {
   padding: 0 40px;
