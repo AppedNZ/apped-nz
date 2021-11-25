@@ -49,6 +49,7 @@ export default function Header({ scrolled, showMenu, setShowMenu }) {
           <div className="Header__menuItems">
             {anchors.map((anchor, i) => (
               <Link
+                key={i}
                 to={anchor.href}
                 {...linkProps}
                 onClick={() => {

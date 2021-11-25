@@ -30,6 +30,7 @@ export default function ModalMenu({ showMenu = true, setShowMenu }) {
     <div className={`${MM} ${showMenu ? "active" : ""}`}>
       {anchors.map((anchor, i) => (
         <Link
+          key={i}
           to={anchor.href}
           {...linkProps}
           onClick={() => {
