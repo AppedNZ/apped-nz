@@ -1,7 +1,7 @@
 import React from "react";
 import Brief from "./Brief";
 import Heading from "./Heading";
-import AboutUsTile from "./AboutUstile";
+import AboutUsTile from "./AboutUsTile";
 export default function AboutUs() {
   const tiles = [
     { tileName: "apps", amount: 500, text: "Developed Applications" },
