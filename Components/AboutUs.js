@@ -21,7 +21,7 @@ export default function AboutUs() {
     {
       tileName: "panels",
       amount: 8,
-      text: "Typical Dev Time",
+      text: "Weeks Typical Dev Time",
       removePlus: true,
       duration: 1500,
     },

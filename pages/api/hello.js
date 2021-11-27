@@ -21,11 +21,11 @@ export default async function handler(req, res) {
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-      from: '"Wipeout👻" <nodemailer.mail.sender@gmail.com>', // sender address
-      to: "alexander@webignite.nz,hello@webignite.nz", // list of receivers
+      from: '"From APPED NZ" <nodemailer.mail.sender@gmail.com>', // sender address
+      to: "hello@apped.nz", // list of receivers
       subject: `Message From APPED NZ Contact Form`,
-      text: `Name: ${req.body.name}\nContact info:${req.body.email}\nBudget:${req.body.budget}\nMessage:${req.body.message}`,
-      html: `<div>Name: ${req.body.name}\nContact info:${req.body.email}\nBudget:${req.body.budget}\nMessage:${req.body.message}</div>`,
+      text: `Name: ${req.body.name}<br/>Contact info:${req.body.email}<br/>Budget:${req.body.budget}<br/>Message:${req.body.message}`,
+      html: `<div><div>Name: ${req.body.name}</div><br/><div>Contact info:${req.body.email}<br/></div><div>Budget:${req.body.budget}<br/></div><div>Message:${req.body.message}</div></div>`,
     });
 
     return `Message sent: %s", ${info.messageId}`;
