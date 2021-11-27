@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Brief from "./Brief";
 import Button from "./Button";
 import PhonesGrid from "./PhonesGrid";
@@ -8,8 +8,12 @@ import { useInView } from "react-intersection-observer";
 const HS = "HeroSection";
 export default function HeroSection({ setShowForm }) {
   const { ref, inView } = useInView();
+  const [height, setHeight] = useState("min-h-screen");
+  useEffect(() => {
+    setHeight("");
+  }, []);
   return (
-    <div className={HS}>
+    <div className={`${HS} ${height}`}>
       <div className="my-container relative">
         <div className={`${HS}__container`}>
           <p className={`${HS}__heading`}>

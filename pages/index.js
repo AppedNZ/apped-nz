@@ -55,8 +55,9 @@ export default function Home() {
       <ExamplesSection setShowForm={setShowForm} />
       <EasyToUseSection />
       <OurTrustedClients />
-      <WhatClientsSay />
+      {/* <WhatClientsSay /> */}
       <div className="relative">
+        <div className="w-full h-1/2 bg-gradient-to-b from from-navy to-transparent absolute top-0 left-0 z-[1]"></div>
         <img
           className="top-0 left-0 absolute w-full h-full object-cover z-0 pointer-events-none transform rotate-180"
           src="/assets/waves-pattern.png"

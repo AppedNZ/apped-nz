@@ -93,7 +93,7 @@ export default function SliderGrid() {
       >
         {tiles.map((tile, i) => (
           <SwiperSlide key={i}>
-            <div key={i} className="Tiles__wrap">
+            <div className="Tiles__wrap">
               <img className="Tiles__tile" src={tile} alt="App example" />
             </div>
           </SwiperSlide>

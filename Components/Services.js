@@ -51,9 +51,8 @@ export default function Services() {
           ))}
         </motion.div>
         <Brief
-          text={` Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-          Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-          unknown`}
+          text={` We provide custom mobile apps from scratch, as well as have a range of app products off the shelf to offer for certain industries. We can also provide the full UI/UX design from start to finish, and host your mobile app on an ultra fast server and support it for you.
+          `}
         />
       </div>
     </div>

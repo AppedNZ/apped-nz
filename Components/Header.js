@@ -20,6 +20,10 @@ const anchors = [
     text: "About",
   },
   {
+    href: "examples",
+    text: "Examples",
+  },
+  {
     href: "contact",
     text: "contact",
   },

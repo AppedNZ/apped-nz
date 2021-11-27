@@ -14,7 +14,7 @@ export default function EasyToUseSection() {
             <span className="text-blue">Backend admin panels</span>
           </Heading>
           <Brief
-            text={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting`}
+            text={`Each one of our mobile apps typically come with a backend admin panel accessible from a web browser. You will be able to login to this admin panel with an admin login and manage all aspects of your mobile app. Typically this is used for user management, reporting, sending push notifications or managing forms or products. Each admin panel is unique and branded for you.`}
           />
         </div>
         <div className={`${ETU}__laptop relative `}>

@@ -2,7 +2,7 @@
 .AboutUs {
   padding-top: 30px;
   padding-bottom: 60px;
-  .Brief {
+  &__textPart {
     padding-top: 20px;
   }
   &__tile {
@@ -47,7 +47,7 @@
         font-weight: 600;
       }
     }
-    .Brief {
+    &__textPart {
       padding: 0;
       width: 60%;
     }

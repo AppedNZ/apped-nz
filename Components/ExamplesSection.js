@@ -17,7 +17,7 @@ export default function ExamplesSection({ setShowForm }) {
     activeClass: "active",
   };
   return (
-    <div id="portfolio" className="my-container relative">
+    <div id="examples" className="my-container relative">
       <img
         style={{ animationDelay: " 2.6s" }}
         className="bubble w-1/12 h-auto absolute top-0 right-4"
@@ -52,15 +52,16 @@ export default function ExamplesSection({ setShowForm }) {
         {/* <div id="portfolio" className={`${ES}__slider relative`}>
           <Slider />
         </div> */}
-        <div className="grid md:grid-cols-[3fr,2fr]  md:gap-10">
-          <Brief
-            text={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the `}
-          />{" "}
+        <div className="grid md:grid-cols-[2fr,3fr]  md:gap-10">
+          {" "}
           <Button
             onClick={() => {
               setShowForm(true);
             }}
           />
+          <p className="text-white text-4xl font-bold self-center">
+            Your mobile app could be next!
+          </p>
         </div>
       </div>
     </div>
