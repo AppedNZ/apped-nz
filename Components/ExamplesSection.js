@@ -5,8 +5,9 @@ import Brief from "./Brief";
 import Button from "./Button";
 import { Link } from "react-scroll";
 import Tiles from "./Tiles";
+import SliderGrid from "./SliderGrid";
 const ES = "ExampleSection";
-export default function ExamplesSection() {
+export default function ExamplesSection({ setShowForm }) {
   const linkProps = {
     spy: true,
     smooth: true,
@@ -16,7 +17,7 @@ export default function ExamplesSection() {
     activeClass: "active",
   };
   return (
-    <div className="my-container relative">
+    <div id="portfolio" className="my-container relative">
       <img
         style={{ animationDelay: " 2.6s" }}
         className="bubble w-1/12 h-auto absolute top-0 right-4"
@@ -46,7 +47,8 @@ export default function ExamplesSection() {
           Examples of <br className="lg:hidden" />{" "}
           <span className="text-blue">our apps</span>
         </Heading>
-        <Tiles />
+        <SliderGrid />
+        {/* <Tiles /> */}
         {/* <div id="portfolio" className={`${ES}__slider relative`}>
           <Slider />
         </div> */}
@@ -54,9 +56,11 @@ export default function ExamplesSection() {
           <Brief
             text={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the `}
           />{" "}
-          <Link {...linkProps} to="contact">
-            <Button />
-          </Link>
+          <Button
+            onClick={() => {
+              setShowForm(true);
+            }}
+          />
         </div>
       </div>
     </div>

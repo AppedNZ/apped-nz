@@ -11,10 +11,13 @@ import Services from "../Components/Services";
 import WhatClientsSay from "../Components/WhatClientsSay";
 import ModalMenu from "../Components/ModalMenu";
 import Bubbles from "../Components/Bubbles";
+import ModalContact from "../Components/ModalContact";
+import AboutUs from "../Components/AboutUs";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [showForm, setShowForm] = useState(false);
   const handleScroll = (e) => {
     if (e.target.scrollingElement.scrollTop < 10) setScrolled(false);
     if (e.target.scrollingElement.scrollTop >= 10) setScrolled(true);
@@ -28,7 +31,7 @@ export default function Home() {
     };
   }, []);
   return (
-    <div className="relative">
+    <div className="relative w-full overflow-x-hidden">
       <Head>
         <title>Apped NZ</title>
         <meta name="description" content="App Development" />
@@ -36,6 +39,7 @@ export default function Home() {
       </Head>
       <Bubbles />
       <Header showMenu={showMenu} setShowMenu={setShowMenu} scrolled={scrolled} />
+      <ModalContact showForm={showForm} setShowForm={setShowForm} />
       <ModalMenu showMenu={showMenu} setShowMenu={setShowMenu} />
       <div id="top" className="relative pt-[100px] overflow-hidden">
         <img
@@ -43,10 +47,12 @@ export default function Home() {
           src="/assets/waves-pattern.png"
           alt="pattern"
         />
-        <HeroSection />
-        <Services />
+
+        <HeroSection setShowForm={setShowForm} />
+        <AboutUs />
       </div>
-      <ExamplesSection />
+      <Services />
+      <ExamplesSection setShowForm={setShowForm} />
       <EasyToUseSection />
       <OurTrustedClients />
       <WhatClientsSay />

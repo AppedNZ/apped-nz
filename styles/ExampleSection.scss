@@ -1,5 +1,11 @@
 @import "./variables.scss";
 .ExampleSection {
+  #slider_next2 {
+    transform: translateX(120%) translateY(10%) scale(1.2);
+  }
+  #slider_prev2 {
+    transform: translateX(-120%) translateY(10%) rotate(180deg) scale(1.2);
+  }
   padding-bottom: 80px;
   .Brief {
     padding-bottom: 24px;

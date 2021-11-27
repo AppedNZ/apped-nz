@@ -16,8 +16,8 @@ const anchors = [
     text: "services",
   },
   {
-    href: "portfolio",
-    text: "portfolio",
+    href: "about",
+    text: "About",
   },
   {
     href: "contact",

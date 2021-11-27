@@ -4,17 +4,9 @@ import Button from "./Button";
 import PhonesGrid from "./PhonesGrid";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Link } from "react-scroll";
+
 const HS = "HeroSection";
-export default function HeroSection() {
-  const linkProps = {
-    spy: true,
-    smooth: true,
-    offset: -200,
-    duration: 600,
-    delay: 100,
-    activeClass: "active",
-  };
+export default function HeroSection({ setShowForm }) {
   const { ref, inView } = useInView();
   return (
     <div className={HS}>
@@ -42,10 +34,14 @@ export default function HeroSection() {
             text={`We are a New Zealand App developmzent agency building
             custom mobile apps for iOS and Android. `}
           />
-          <Link {...linkProps} to="contact">
-            {" "}
-            <Button text="get a quote" />
-          </Link>
+
+          <Button
+            onClick={() => {
+              setShowForm(true);
+            }}
+            text="get a quote"
+          />
+
           <div className={`${HS}__weDevelopFor`}>
             <img src="/assets/applestore.svg" alt="develop for apple" />
             <img src="/assets/googleplay.svg" alt="develop for google" />

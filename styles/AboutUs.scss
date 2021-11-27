@@ -1,0 +1,57 @@
+@import "./variables.scss";
+.AboutUs {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  .Brief {
+    padding-top: 20px;
+  }
+  &__tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 24px 0;
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+    line-height: 1;
+    .amount {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .descr {
+      font-size: 12px;
+      text-align: center;
+      font-weight: 600;
+    }
+    &.apps {
+      background-color: #96cfff;
+    }
+    &.customers {
+      background-color: #71beff;
+    }
+    &.panels {
+      background-color: #1392ff;
+    }
+    &.times {
+      background-color: #42a9ff;
+    }
+  }
+  @media (min-width: 1024px) {
+    &__tile {
+      .amount {
+        font-size: 56px;
+      }
+      .descr {
+        font-size: 12px;
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+    .Brief {
+      padding: 0;
+      width: 60%;
+    }
+  }
+  @media (min-width: 1280px) {
+  }
+}

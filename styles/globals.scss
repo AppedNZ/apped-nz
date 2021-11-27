@@ -18,10 +18,12 @@
 @import "./PhonesGrid.scss";
 @import "./ModalMenu.scss";
 @import "./Tiles.scss";
+@import "./AboutUs.scss";
 body {
   font-family: "Blinker", sans-serif;
   overflow-x: hidden;
-  background: #054a85;
+  background: $navy;
+  overflow-x: hidden;
   @media (min-width: 1920px) {
     transform: scale(1.3);
     position: relative;
