@@ -52,16 +52,16 @@ export default function ExamplesSection({ setShowForm }) {
         {/* <div id="portfolio" className={`${ES}__slider relative`}>
           <Slider />
         </div> */}
-        <div className="grid md:grid-cols-[2fr,3fr]  md:gap-10">
+        <div className="grid md:grid-cols-[3fr,2fr]  md:gap-10">
           {" "}
+          <p className="text-white text-4xl font-bold self-center">
+            Your mobile app could be next!
+          </p>
           <Button
             onClick={() => {
               setShowForm(true);
             }}
           />
-          <p className="text-white text-4xl font-bold self-center">
-            Your mobile app could be next!
-          </p>
         </div>
       </div>
     </div>
