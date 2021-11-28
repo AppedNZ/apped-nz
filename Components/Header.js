@@ -12,13 +12,14 @@ const linkProps = {
 };
 const anchors = [
   {
-    href: "services",
-    text: "services",
-  },
-  {
     href: "about",
     text: "About",
   },
+  {
+    href: "services",
+    text: "services",
+  },
+
   {
     href: "examples",
     text: "Examples",
