@@ -57,7 +57,7 @@ export default function Home() {
       <OurTrustedClients />
       {/* <WhatClientsSay /> */}
       <div className="relative">
-        <div className="w-full h-1/2 bg-gradient-to-b from from-navy to-transparent absolute top-0 left-0 z-[1]"></div>
+        <div className="gradient-bottom w-full h-1/2 absolute top-0 left-0 z-[1];"></div>
         <img
           className="top-0 left-0 absolute w-full h-full object-cover z-0 pointer-events-none transform rotate-180"
           src="/assets/waves-pattern.png"

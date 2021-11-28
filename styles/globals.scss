@@ -36,6 +36,9 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+.gradient-bottom {
+  background: linear-gradient(180deg, $navy 0%, rgba(0, 0, 0, 0) 100%);
+}
 .Brief {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
