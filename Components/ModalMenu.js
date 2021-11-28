@@ -4,12 +4,17 @@ import { Link } from "react-scroll";
 const MM = "ModalMenu";
 const anchors = [
   {
+    href: "about",
+    text: "About",
+  },
+  {
     href: "services",
     text: "services",
   },
+
   {
-    href: "portfolio",
-    text: "portfolio",
+    href: "examples",
+    text: "Examples",
   },
   {
     href: "contact",
@@ -40,9 +45,12 @@ export default function ModalMenu({ showMenu = true, setShowMenu }) {
           {anchor.text}
         </Link>
       ))}
-      <button className="uppercase leading-none py-2.5 px-4 bg-blue text-white font-bold">
+      <a
+        href="https://system.apped.nz/"
+        className="uppercase leading-none py-2.5 px-4 bg-blue text-white font-bold"
+      >
         client area
-      </button>
+      </a>
       <a className="leading-none text-base" href="phone:0800726543">
         0800 726 543
       </a>

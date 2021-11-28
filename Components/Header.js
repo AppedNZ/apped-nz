@@ -64,9 +64,12 @@ export default function Header({ scrolled, showMenu, setShowMenu }) {
                 {anchor.text}
               </Link>
             ))}
-            <button className="client uppercase leading-none py-2.5 px-4 bg-blue text-white font-bold">
+            <a
+              href="https://system.apped.nz/"
+              className="client uppercase leading-none py-2.5 px-4 bg-blue text-white font-bold"
+            >
               client area
-            </button>
+            </a>
             <a className="leading-none text-base phone relative" href="phone:0800726543">
               <span className="number"> 0800 726 543</span>{" "}
               <img className="phone-icon" src="/assets/phone.svg" alt="make a call" />
