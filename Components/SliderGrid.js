@@ -82,7 +82,7 @@ export default function SliderGrid() {
           rows: sliderProps.rows,
           fill: "row",
         }}
-        spaceBetween={20}
+        spaceBetween={0}
         // pagination
         // pagination={pagination}
         // loop={true}
@@ -93,8 +93,10 @@ export default function SliderGrid() {
       >
         {tiles.map((tile, i) => (
           <SwiperSlide key={i}>
-            <div className="Tiles__wrap">
-              <img className="Tiles__tile" src={tile} alt="App example" />
+            <div className="p-2.5">
+              <div className="Tiles__wrap ">
+                <img className="Tiles__tile" src={tile} alt="App example" />
+              </div>
             </div>
           </SwiperSlide>
         ))}
