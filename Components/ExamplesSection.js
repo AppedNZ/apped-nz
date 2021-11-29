@@ -47,6 +47,9 @@ export default function ExamplesSection({ setShowForm }) {
           Examples of <br className="lg:hidden" />{" "}
           <span className="text-blue">our apps</span>
         </Heading>
+        <Brief
+          text={`We have designed and developed over 150+ mobile apps for NZ businesses.`}
+        />
         <SliderGrid />
         {/* <Tiles /> */}
         {/* <div id="portfolio" className={`${ES}__slider relative`}>

@@ -28,7 +28,7 @@ export default function AboutUs() {
     {
       tileName: "times",
       amount: 100,
-      text: "Service Guarantee",
+      text: "Committed",
       removePlus: true,
       duration: 2000,
     },
