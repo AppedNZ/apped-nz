@@ -35,7 +35,7 @@ export default function HeroSection({ setShowForm }) {
             </span>
           </p>
           <Brief
-            text={`We are a New Zealand App developmzent agency building
+            text={`We are a New Zealand App development agency building
             custom mobile apps for iOS and Android. `}
           />
 
