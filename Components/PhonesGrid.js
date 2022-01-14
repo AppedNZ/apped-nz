@@ -81,7 +81,7 @@ export default function PhonesGrid() {
           repeatDelay: 1.2,
         }}
         className="phone"
-        src="/assets/apps/food_truck.png"
+        src="/assets/apps/bookitin247.png"
         alt="phone app"
       />
       <motion.img
@@ -94,7 +94,7 @@ export default function PhonesGrid() {
           delay: 0.5,
         }}
         className="phone"
-        src="/assets/apps/bookitin247.png"
+        src="/assets/apps/food_truck.png"
         alt="phone app"
       />
       <motion.img
