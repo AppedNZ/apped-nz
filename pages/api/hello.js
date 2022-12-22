@@ -1,37 +1,34 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-require("dotenv").config();
-const PASSWORD = process.env.password;
+import emailjs from "@emailjs/nodejs";
 export default async function handler(req, res) {
-  // console.log(req.body);
-  let nodemailer = require("nodemailer");
-  async function main() {
-    // Generate test SMTP service account from ethereal.email
-    // Only needed if you don't have a real mail account for testing
-    const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 465,
-      auth: {
-        user: "nodemailer.mail.sender@gmail.com",
-        pass: PASSWORD,
+  const { name, email, budget, message } = req?.body || {};
+  var data = {
+    service_id: process.env.SERVICE_ID,
+    template_id: process.env.TEMPLATE_ID,
+    user_id: process.env.USER_ID,
+  };
+  const templateParams = {
+    name,
+    email,
+    budget,
+    message,
+  };
+
+  emailjs
+    .send(`${process.env.SERVICE_ID}`, `${process.env.TEMPLATE_ID}`, templateParams, {
+      publicKey: `${process.env.USER_ID}`,
+      privateKey: `${process.env.USER_PRIVATE_ID}`,
+    })
+    .then(
+      (response) => {
+        res.json({ done: true, response });
+        console.log("SUCCESS!", response.status, response.text);
       },
-      secure: true,
-    });
+      (err) => {
+        console.log("FAILED...", err);
+      }
+    );
 
-    // create reusable transporter object using the default SMTP transport hello@webignite.com
-
-    // send mail with defined transport object
-    let info = await transporter.sendMail({
-      from: '"From APPED NZ" <nodemailer.mail.sender@gmail.com>', // sender address
-      to: "hello@apped.nz", // list of receivers
-      subject: `Message From APPED NZ Contact Form`,
-      text: `Name: ${req.body.name}<br/>Contact info:${req.body.email}<br/>Budget:${req.body.budget}<br/>Message:${req.body.message}`,
-      html: `<div><div>Name: ${req.body.name}</div><br/><div>Contact info:${req.body.email}<br/></div><div>Budget:${req.body.budget}<br/></div><div>Message:${req.body.message}</div></div>`,
-    });
-
-    return `Message sent: %s", ${info.messageId}`;
-  }
-
-  const result = await main();
-  console.log(result);
-  res.json({ done: true, result });
+  // console.log(result);
+  // res.json({ done: true, result });
 }

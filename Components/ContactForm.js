@@ -28,7 +28,7 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
     }).then((res) => {
       console.log("Response received");
       if (res.status === 200) {
-        console.log("Response succeeded!");
+        console.log("Response succeeded!", res);
         setSubmitted(true);
         setTimeout(onSubmit, 1000);
         setName("");
