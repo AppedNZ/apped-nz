@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     budget,
     message,
   };
-  let res;
+  let result;
   emailjs
     .send(`${process.env.SERVICE_ID}`, `${process.env.TEMPLATE_ID}`, templateParams, {
       publicKey: `${process.env.USER_ID}`,
@@ -22,16 +22,16 @@ export default async function handler(req, res) {
     .then(
       (response) => {
         console.log("SUCCESS!", response.status, response.text);
-        res = response;
+        result = response;
         return res.json({ done: true, response });
       },
       (err) => {
         console.log("FAILED...", err);
-        res = err;
-        return res.json({ done: true, err });
+        result = err;
+        return res.json({ done: false, err });
       }
     );
 
-  console.log(res);
-  res.json({ done: "after", res });
+  console.log(result);
+  res.json({ done: "after", result });
 }
