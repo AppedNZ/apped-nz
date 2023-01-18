@@ -1,6 +1,6 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import emailjs from "@emailjs/nodejs";
+i; //mport emailjs from "@emailjs/nodejs";
 export default async function handler(req, res) {
+  const emailjs = require("@emailjs/nodejs");
   const { name, email, budget, message } = req?.body || {};
   var data = {
     service_id: process.env.SERVICE_ID,
