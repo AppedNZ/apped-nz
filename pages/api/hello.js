@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     message,
   };
   let result;
-  emailjs
+  await emailjs
     .send(`${process.env.SERVICE_ID}`, `${process.env.TEMPLATE_ID}`, templateParams, {
       publicKey: `${process.env.USER_ID}`,
       privateKey: `${process.env.USER_PRIVATE_ID}`,
@@ -23,15 +23,15 @@ export default async function handler(req, res) {
       (response) => {
         console.log("SUCCESS!", response.status, response.text);
         result = response;
-        return res.json({ done: true, response });
+        res.json({ done: true, response });
       },
       (err) => {
         console.log("FAILED...", err);
         result = err;
-        return res.json({ done: false, err });
+        res.json({ done: false, err });
       }
     );
 
-  console.log(result);
-  res.json({ done: "after", result });
+  console.log("AFTER", result);
+  // res.json({ done: "after", result });
 }
