@@ -1,4 +1,4 @@
-i; //mport emailjs from "@emailjs/nodejs";
+//import emailjs from "@emailjs/nodejs";
 export default async function handler(req, res) {
   const emailjs = require("@emailjs/nodejs");
   const { name, email, budget, message } = req?.body || {};
@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     budget,
     message,
   };
-
+  let res;
   emailjs
     .send(`${process.env.SERVICE_ID}`, `${process.env.TEMPLATE_ID}`, templateParams, {
       publicKey: `${process.env.USER_ID}`,
@@ -21,14 +21,17 @@ export default async function handler(req, res) {
     })
     .then(
       (response) => {
-        res.json({ done: true, response });
         console.log("SUCCESS!", response.status, response.text);
+        res = response;
+        return res.json({ done: true, response });
       },
       (err) => {
         console.log("FAILED...", err);
+        res = err;
+        return res.json({ done: true, err });
       }
     );
 
-  // console.log(result);
-  // res.json({ done: true, result });
+  console.log(res);
+  res.json({ done: "after", res });
 }
