@@ -70,8 +70,8 @@ export default function Header({ scrolled, showMenu, setShowMenu }) {
             >
               client area
             </a>
-            <a className="leading-none text-base phone relative" href="phone:0800726543">
-              <span className="number"> 0800 726 543</span>{" "}
+            <a className="leading-none text-base phone relative" href="tel:+640211695214">
+              <span className="number"> 021 169 5214</span>{" "}
               <img className="phone-icon" src="/assets/phone.svg" alt="make a call" />
             </a>
           </div>

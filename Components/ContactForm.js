@@ -128,7 +128,7 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
           placeholder="What do you need the app to do?"
         />
       </div>
-      <button type="submit" className={`button-submit wide `}>
+      <button disabled={submitted} type="submit" className={`button-submit wide `}>
         {submitted ? "Thank You:)" : "Get a quote"}
       </button>
     </form>
