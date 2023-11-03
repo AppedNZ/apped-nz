@@ -1,7 +1,7 @@
 import React from "react";
+import AboutUsTile from "./AboutUsTile";
 import Brief from "./Brief";
 import Heading from "./Heading";
-import AboutUsTile from "./AboutUsTile";
 export default function AboutUs() {
   const tiles = [
     {
@@ -46,11 +46,9 @@ export default function AboutUs() {
             ))}
           </div>
           <div className="AboutUs__textPart ">
-            <h2 className="text-white text-4xl font-bold pb-5 ">
-              We build amazing Apps!
-            </h2>
+            <h2 className="text-white text-4xl font-bold pb-5 ">App Developers with a Mission</h2>
             <Brief
-              text={`Whether you need a simple app solution for your real estate business or personal training service or need a more custom developed solution for your construction company or larger corporate business we can provide it all. 
+              text={`As seasoned app developers, we've successfully delivered numerous applications across various sectors. Our app development process is both streamlined and comprehensive, ensuring your vision comes to life efficiently and effectively.
               `}
             />
             <br />

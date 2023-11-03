@@ -8,13 +8,15 @@
     width: 80%;
   }
   &__heading {
-    font-size: 40px;
+    font-size: 28px;
     line-height: 1;
     color: white;
     font-weight: 800;
     letter-spacing: 2%;
     text-transform: uppercase;
     margin-bottom: 16px;
+    position: relative;
+    z-index: 10;
   }
   &__brief {
     font-family: "Montserrat", sans-serif;
@@ -22,6 +24,8 @@
     color: white;
     font-size: 10px;
     line-height: 18px;
+    position: relative;
+    z-index: 10;
   }
   .Button {
     width: 80%;
@@ -41,13 +45,14 @@
       max-width: 528px;
     }
     &__heading {
-      font-size: 70px;
+      font-size: 52px;
     }
     &__weDevelopFor {
       display: flex;
     }
     .Brief {
-      width: 80%;
+      width: 80%;position: relative;
+      z-index: 10;
     }
   }
   @media (min-width: 1280px) {
@@ -57,7 +62,7 @@
       flex-shrink: 0;
     }
     &__heading {
-      font-size: 90px;
+      font-size: 70px;
     }
   }
 }

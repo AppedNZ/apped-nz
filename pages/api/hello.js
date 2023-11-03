@@ -1,4 +1,3 @@
-//import emailjs from "@emailjs/nodejs";
 export default async function handler(req, res) {
   const emailjs = require("@emailjs/nodejs");
   const { name, email, budget, message } = req?.body || {};

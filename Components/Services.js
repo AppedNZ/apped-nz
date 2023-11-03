@@ -1,8 +1,8 @@
+import { motion } from "framer-motion";
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import Brief from "./Brief";
 import Heading from "./Heading";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 const S = "Services";
 const services = [
   { icon: "/assets/customApps.svg", title: "Custom Apps" },
@@ -27,8 +27,8 @@ export default function Services() {
     <div className="my-container">
       <div className={S}>
         <Heading type="big" align="left">
-          Services that <br className="lg:hidden" />
-          <span className="text-blue">we offer</span>
+          App Development <br className="lg:hidden" />
+          <span className="text-blue">Services</span>
         </Heading>
         <motion.div
           ref={ref}
@@ -51,7 +51,7 @@ export default function Services() {
           ))}
         </motion.div>
         <Brief
-          text={` We provide custom mobile apps from scratch, as well as have a range of app products off the shelf to offer for certain industries. We can also provide the full UI/UX design from start to finish, and host your mobile app on an ultra fast server and support it for you.
+          text={` Our app developer services include Custom Apps, App Products, App Hosting, and App Design. From initial design to app hosting, our app developers are equipped to handle every aspect with precision and care.
           `}
         />
       </div>

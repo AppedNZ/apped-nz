@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Brief from "./Brief";
 import ContactForm from "./ContactForm";
 import Heading from "./Heading";
@@ -49,11 +49,17 @@ export default function GetInTouch() {
       <div className={GIT}>
         <div className={`${GIT}__contacts`}>
           <Heading>
-            get in touch <span className="text-blue">with us</span>
+            Connect with <br /> <span className="text-blue">Our App Developers</span>
           </Heading>
-          <Brief text={`Please fill out the below form and we will be in touch ASAP.`} />
+          <Brief
+            text={`Get in touch with our app developers today by phone at 021 169 5214, email a, or visit us in Tauranga, New Zealand. Let's bring your app idea to life!`}
+          >
+            Get in touch with our app developers today by phone at 021 169 5214, email at{" "}
+            <a href="mailto:hello@apped.nz">hello@apped.nz</a>, or visit us in Tauranga, New
+            Zealand. {`Let's`} bring your app idea to life!
+          </Brief>
           <div className={`${GIT}__contactTypes`}>
-            {contacts.map((c, i) => (
+            {/* {contacts.map((c, i) => (
               <div key={i} className={`${GIT}__contact`}>
                 <img src={c.icon} alt="contact icon" />
                 <p>
@@ -67,7 +73,7 @@ export default function GetInTouch() {
                   )}
                 </p>
               </div>
-            ))}
+            ))} */}
           </div>
         </div>
         <ContactForm addID="contact" />

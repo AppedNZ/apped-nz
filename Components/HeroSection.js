@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 import Brief from "./Brief";
 import Button from "./Button";
 import PhonesGrid from "./PhonesGrid";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const HS = "HeroSection";
 export default function HeroSection({ setShowForm }) {
@@ -16,13 +16,14 @@ export default function HeroSection({ setShowForm }) {
     <div className={`${HS} ${height}`}>
       <div className="my-container relative">
         <div className={`${HS}__container`}>
-          <p className={`${HS}__heading`}>
-            Need a <br className="lg:hidden" />
-            mobile <span className="text-blue">app</span>
-            <br className="lg:hidden" />
+          <h1 className={`${HS}__heading`}>
+            Looking for <br />
+            an expert <br />
+            app developer
+            <br />
             <span className="text-blue">
               {" "}
-              developed
+              in New Zealand
               <motion.span
                 ref={ref}
                 className="inline-block relative"
@@ -33,10 +34,9 @@ export default function HeroSection({ setShowForm }) {
                 ?
               </motion.span>
             </span>
-          </p>
+          </h1>
           <Brief
-            text={`We are a New Zealand App development agency building
-            custom mobile apps for iOS and Android. `}
+            text={`At Apped NZ, our team of professional app developers specializes in crafting custom mobile applications tailored for both iOS and Android platforms. `}
           />
 
           <Button

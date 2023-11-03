@@ -46,6 +46,10 @@ body {
   font-size: 10px;
   line-height: 18px;
   text-align: center;
+  & a{
+    @apply text-blue underline;
+    text-underline-offset: 4px;
+  }
 }
 @media (min-width: 768px) {
   .my-container {

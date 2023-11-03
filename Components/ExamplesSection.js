@@ -1,10 +1,7 @@
 import React from "react";
-import Slider from "./Slider";
-import Heading from "./Heading";
 import Brief from "./Brief";
 import Button from "./Button";
-import { Link } from "react-scroll";
-import Tiles from "./Tiles";
+import Heading from "./Heading";
 import SliderGrid from "./SliderGrid";
 const ES = "ExampleSection";
 export default function ExamplesSection({ setShowForm }) {
@@ -44,12 +41,10 @@ export default function ExamplesSection({ setShowForm }) {
       />
       <div className={ES}>
         <Heading>
-          Examples of <br className="lg:hidden" />{" "}
-          <span className="text-blue">our apps</span>
+          Portfolio of <br className="lg:hidden" />{" "}
+          <span className="text-blue"> App Development</span>
         </Heading>
-        <Brief
-          text={`We have designed and developed over 150+ mobile apps for NZ businesses.`}
-        />
+        <Brief text={`We have designed and developed over 150+ mobile apps for NZ businesses.`} />
         <SliderGrid />
         {/* <Tiles /> */}
         {/* <div id="portfolio" className={`${ES}__slider relative`}>
@@ -57,14 +52,18 @@ export default function ExamplesSection({ setShowForm }) {
         </div> */}
         <div className="grid md:grid-cols-[3fr,2fr]  md:gap-10">
           {" "}
-          <p className="text-white text-4xl font-bold self-center">
-            Your mobile app could be next!
+          <p className="text-white text-2xl font-bold self-center">
+            Our app developers have contributed to over 150+ mobile applications for New Zealand
+            businesses, showcasing our versatility and dedication to quality.
           </p>
-          <Button
-            onClick={() => {
-              setShowForm(true);
-            }}
-          />
+          <div className="h-[max-content] w-full self-center">
+            <Button
+              addClass=""
+              onClick={() => {
+                setShowForm(true);
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

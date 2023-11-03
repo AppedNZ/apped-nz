@@ -1,18 +1,17 @@
-import { useState, useEffect } from "react";
 import Head from "next/head";
+import { useEffect, useState } from "react";
+import AboutUs from "../Components/AboutUs";
+import Bubbles from "../Components/Bubbles";
 import EasyToUseSection from "../Components/EasyToUseSection";
 import ExamplesSection from "../Components/ExamplesSection";
 import Footer from "../Components/Footer";
 import GetInTouch from "../Components/GetInTouch";
 import Header from "../Components/Header";
 import HeroSection from "../Components/HeroSection";
+import ModalContact from "../Components/ModalContact";
+import ModalMenu from "../Components/ModalMenu";
 import OurTrustedClients from "../Components/OurTrustedClients";
 import Services from "../Components/Services";
-import WhatClientsSay from "../Components/WhatClientsSay";
-import ModalMenu from "../Components/ModalMenu";
-import Bubbles from "../Components/Bubbles";
-import ModalContact from "../Components/ModalContact";
-import AboutUs from "../Components/AboutUs";
 
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
