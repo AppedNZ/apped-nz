@@ -36,6 +36,12 @@
       font-weight: 500;
       font-size: 14px;
       line-height: 1;
+      &:has(.email) {
+        position: absolute;
+        height: 0;
+        width: 0;
+        opacity: 0;
+      }
     }
     select {
       background-color: white;

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 const GIT = "GetInTouch";
 export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
   const [name, setName] = useState("");
+  const [honeypot, setHoneyPot] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [phone, setPhone] = useState("");
@@ -10,7 +11,9 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Sending");
-
+    if (honeypot) {
+      return;
+    }
     let data = {
       name,
       email,
@@ -56,7 +59,21 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
     {
       icon: "/assets/inputs/email.svg",
       inputProps: {
+        className: "email",
         name: "email",
+        type: "email",
+        required: false,
+        placeholder: "Email",
+        value: honeypot,
+        onChange: (e) => {
+          setHoneyPot(e.target.value);
+        },
+      },
+    },
+    {
+      icon: "/assets/inputs/email.svg",
+      inputProps: {
+        name: "mail",
         type: "email",
         required: true,
         placeholder: "Email",
@@ -86,8 +103,7 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
       onSubmit={(e) => {
         handleSubmit(e);
       }}
-      className={`${GIT}__contact-form relative`}
-    >
+      className={`${GIT}__contact-form relative`}>
       {inputs.map((input) => (
         <div key={input.inputProps.name} className="inputWrapper">
           <input {...input.inputProps} />
@@ -104,8 +120,7 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
           className={`${budget === "" ? "text-gray-400" : ""}`}
           onChange={(e) => {
             setBudget(e.target.value);
-          }}
-        >
+          }}>
           {" "}
           <option className="hidden" value="" disabled selected>
             Choose Your Budget
