@@ -60,11 +60,12 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
       icon: "/assets/inputs/email.svg",
       inputProps: {
         className: "email",
-        name: "email",
-        type: "email",
+        name: "age",
+        type: "text",
         required: false,
-        placeholder: "Email",
+        placeholder: "Your Age",
         value: honeypot,
+        autoComplete: "off",
         onChange: (e) => {
           setHoneyPot(e.target.value);
         },
