@@ -126,6 +126,7 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
           <option className="hidden" value="" disabled selected>
             Choose Your Budget
           </option>
+          <option value="Not sure on budget">Not sure on budget</option>
           <option value="Under $5K">Under $5K</option>
           <option value="$5K to $10K">$5K to $10K</option>
           <option value="$10K - $20K">$10K - $20K</option>
