@@ -29,10 +29,10 @@ const tiles = [
   "/assets/tiles/14.jpeg",
   "/assets/tiles/15.jpeg",
   "/assets/tiles/16.jpeg",
-  "/assets/tiles/17.jpeg",
-  "/assets/tiles/18.jpeg",
-  "/assets/tiles/19.jpeg",
-  "/assets/tiles/20.jpeg",
+  // "/assets/tiles/17.jpeg",
+  // "/assets/tiles/18.jpeg",
+  // "/assets/tiles/19.jpeg",
+  // "/assets/tiles/20.jpeg",
 ];
 export default function SliderGrid() {
   const [sliderProps, setSlideProps] = useState({ slidesPerView: 2, rows: 3 });
@@ -52,7 +52,7 @@ export default function SliderGrid() {
     window &&
       window.innerWidth >= 1280 &&
       setSlideProps({
-        slidesPerView: 5,
+        slidesPerView: 4,
         rows: 4,
       });
   }, []);
