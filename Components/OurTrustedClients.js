@@ -37,7 +37,7 @@ export default function OurTrustedClients() {
         </Heading>
         <div className="w-full lg:w-2/3 mx-auto">
           <Brief
-            text={`Numerous clients have placed their trust in our app development expertise, and we're proud to have developed apps for brands like Hello Sushi and NZ Hops.`}
+            text={`Numerous clients have placed their trust in our app development expertise, and we're proud to have developed apps for some large New Zealand brands.`}
           />
         </div>
         <motion.div
@@ -45,8 +45,7 @@ export default function OurTrustedClients() {
           variants={container}
           initial="hidden"
           animate={inView ? "show" : "hidden"}
-          className={`${OTC}__clients-grid`}
-        >
+          className={`${OTC}__clients-grid`}>
           <motion.img key={1} variants={item} src="/assets/clients/1.png" alt="Hello Sushi" />
           <motion.img key={2} variants={item} src="/assets/clients/2.png" alt="Ourfffarm" />
           <motion.img key={3} variants={item} src="/assets/clients/3.png" alt="Prawn Park" />
