@@ -60,7 +60,7 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
       icon: "/assets/inputs/email.svg",
       inputProps: {
         className: "email",
-        name: "age",
+        name: "username",
         type: "text",
         required: false,
         placeholder: "Your Age",
