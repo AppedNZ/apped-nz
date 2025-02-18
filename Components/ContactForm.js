@@ -11,9 +11,9 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Sending");
-    if (honeypot) {
-      return;
-    }
+    // if (honeypot) {
+    //   return;
+    // }
     let data = {
       name,
       email,
