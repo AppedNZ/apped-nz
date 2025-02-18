@@ -127,11 +127,11 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
             Choose Your Budget
           </option>
           <option value="Not sure on budget">Not sure on budget</option>
-          <option value="Under $5K">Under $5K</option>
-          <option value="$5K to $10K">$5K to $10K</option>
-          <option value="$10K - $20K">$10K - $20K</option>
-          <option value="$20K - $30K">$20K - $30K</option>
-          <option value="More than $30K">More than $30K</option>
+          <option value="Under $10K">Under $10K</option>
+          <option value="$10K - $25K">$10K - $25K</option>
+          <option value="$25K - $50K">$25K - $50K</option>
+          <option value="$50K to $100K">$50K to $100K</option>
+          <option value="More than $100K">More than $100K</option>
         </select>
       </div>
       <div className="inputWrapper w-full comment wide">
