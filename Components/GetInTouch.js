@@ -52,9 +52,8 @@ export default function GetInTouch() {
             Connect with <br /> <span className="text-blue">Our App Developers</span>
           </Heading>
           <Brief
-            text={`Get in touch with our app developers today by phone at 021 169 5214, email a, or visit us in Tauranga, New Zealand. Let's bring your app idea to life!`}
-          >
-            Get in touch with our app developers today by phone at 021 169 5214, email at{" "}
+            text={`Get in touch with our app developers today by email or visit us in Tauranga, New Zealand. Let's bring your app idea to life!`}>
+            Get in touch with our app developers today by email at{" "}
             <a href="mailto:hello@apped.nz">hello@apped.nz</a>, or visit us in Tauranga, New
             Zealand. {`Let's`} bring your app idea to life!
           </Brief>
