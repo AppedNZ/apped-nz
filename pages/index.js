@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <div className="relative w-full overflow-x-hidden">
       <Head>
-        <title>Apped NZ</title>
+        <title>App & Software Development for NZ Businesses</title>
         <meta name="description" content="App Development" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
