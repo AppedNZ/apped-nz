@@ -14,10 +14,9 @@
     transition: all 0.3s;
     width: 100%;
     max-width: 65%;
-   
+
     &.scrolled {
-      max-width: 100%; 
-      
+      max-width: 100%;
     }
   }
   &.scrolled {
@@ -66,7 +65,9 @@
     .phone-icon {
       opacity: 0;
       position: absolute;
-      width: auto;
+      width: 16px;
+      height: 16px;
+      object-fit: contain;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
@@ -79,7 +80,7 @@
     }
     &:hover {
       .number {
-        transform: translateX(25px);
+        transform: translateX(18px);
         transition: all 0.2s;
       }
       .phone-icon {

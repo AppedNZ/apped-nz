@@ -1,6 +1,5 @@
-import React from "react";
-import Socials from "./Socials";
 import { Link } from "react-scroll";
+import Socials from "./Socials";
 const MM = "ModalMenu";
 const anchors = [
   {
@@ -40,20 +39,20 @@ export default function ModalMenu({ showMenu = true, setShowMenu }) {
           {...linkProps}
           onClick={() => {
             setShowMenu(false);
-          }}
-        >
+          }}>
           {anchor.text}
         </Link>
       ))}
       <a
         href="https://system.apped.nz/"
-        className="uppercase leading-none py-2.5 px-4 bg-blue text-white font-bold"
-      >
+        className="uppercase leading-none py-2.5 px-4 bg-blue text-white font-bold">
         client area
       </a>
-      <a className="leading-none text-base" href="phone:0800726543">
-        0800 726 543
+
+      <a className="leading-none text-base " href="tel:+640211695214">
+        <span className="number"> 021 169 5214</span>{" "}
       </a>
+
       <Socials />
     </div>
   );

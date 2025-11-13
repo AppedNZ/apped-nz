@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-scroll";
 import Burger from "./Burger";
 const linkProps = {
@@ -66,14 +65,18 @@ export default function Header({ scrolled, showMenu, setShowMenu }) {
               className="client uppercase leading-none py-2.5 px-4 bg-blue text-white font-bold">
               client area
             </a>
-            {/* <a className="leading-none text-base phone relative" href="tel:+640211695214">
-              <span className="number"> 021 169 5214</span>{" "}
-              <img className="phone-icon" src="/assets/phone.svg" alt="make a call" />
-            </a> */}
             <a className="leading-none text-base phone relative" href="mailto:hello@apped.nz">
               <span className="number">hello@apped.nz</span>{" "}
-              {/* <img className="phone-icon" src="/assets/mail.svg" alt="make a call" /> */}
-            </a>
+              <img className="phone-icon" src="/assets/email.svg" alt="send email" />
+            </a>{" "}
+            {scrolled ? (
+              <a className="leading-none text-base phone relative" href="tel:+640211695214">
+                <span className="number"> 021 169 5214</span>{" "}
+                <img className="phone-icon " src="/assets/phone.svg" alt="make a call" />
+              </a>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>

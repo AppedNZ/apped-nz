@@ -1,4 +1,3 @@
-import React from "react";
 import Brief from "./Brief";
 import ContactForm from "./ContactForm";
 import Heading from "./Heading";
@@ -16,7 +15,7 @@ const contacts = [
     href: 'mailto:"hello@apped.nz',
     text: "hello@apped.nz",
   },
-  { icon: "/assets/location.svg", type: "address", text: "Tauranga, New Zealand" },
+  // { icon: "/assets/location.svg", type: "address", text: "Tauranga, New Zealand" },
 ];
 
 export default function GetInTouch() {
@@ -58,7 +57,7 @@ export default function GetInTouch() {
             Zealand. {`Let's`} bring your app idea to life!
           </Brief>
           <div className={`${GIT}__contactTypes`}>
-            {/* {contacts.map((c, i) => (
+            {contacts.map((c, i) => (
               <div key={i} className={`${GIT}__contact`}>
                 <img src={c.icon} alt="contact icon" />
                 <p>
@@ -72,7 +71,7 @@ export default function GetInTouch() {
                   )}
                 </p>
               </div>
-            ))} */}
+            ))}
           </div>
         </div>
         <ContactForm addID="contact" />
