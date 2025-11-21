@@ -8,27 +8,26 @@ import "swiper/css/grid";
 import "swiper/css/pagination";
 
 // import Swiper core and required modules
-import React from "react";
 import SwiperCore, { Grid, Navigation, Pagination } from "swiper";
 
 SwiperCore.use([Grid, Pagination, Navigation]);
 const tiles = [
-  "/assets/tiles/1.jpeg",
-  "/assets/tiles/2.jpeg",
-  "/assets/tiles/3.jpeg",
-  "/assets/tiles/4.jpeg",
-  "/assets/tiles/5.jpeg",
-  "/assets/tiles/6.jpeg",
-  "/assets/tiles/7.jpeg",
-  "/assets/tiles/8.jpeg",
-  "/assets/tiles/9.jpeg",
-  "/assets/tiles/10.jpeg",
-  "/assets/tiles/11.jpeg",
-  "/assets/tiles/12.jpeg",
-  "/assets/tiles/13.jpeg",
-  "/assets/tiles/14.jpeg",
-  "/assets/tiles/15.jpeg",
-  "/assets/tiles/16.jpeg",
+  "/assets/tiles/1.jpg",
+  "/assets/tiles/2.jpg",
+  "/assets/tiles/3.jpg",
+  "/assets/tiles/4.jpg",
+  "/assets/tiles/5.jpg",
+  "/assets/tiles/6.jpg",
+  "/assets/tiles/7.jpg",
+  "/assets/tiles/8.jpg",
+  "/assets/tiles/9.jpg",
+  "/assets/tiles/10.jpg",
+  "/assets/tiles/11.jpg",
+  "/assets/tiles/12.jpg",
+  // "/assets/tiles/13.jpg",
+  // "/assets/tiles/14.jpg",
+  // "/assets/tiles/15.jpg",
+  // "/assets/tiles/16.jpg",
   // "/assets/tiles/17.jpeg",
   // "/assets/tiles/18.jpeg",
   // "/assets/tiles/19.jpeg",

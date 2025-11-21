@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 // .phone:nth-of-type(1) {
 //   left: 0%;
@@ -43,8 +42,8 @@ export default function PhonesGrid() {
           repeatDelay: 2.2,
         }}
         className="phone"
-        src="/assets/apps/airport.png"
-        alt="phone app"
+        src="/assets/apps/huntmate.png"
+        alt="Huntmate phone app"
       />
       <motion.img
         animate={{
@@ -56,8 +55,8 @@ export default function PhonesGrid() {
           repeatDelay: 1.2,
         }}
         className="phone"
-        src="/assets/apps/olympus.png"
-        alt="phone app"
+        src="/assets/apps/enerpro.png"
+        alt="Enerpro phone app"
       />
       <motion.img
         animate={{
@@ -69,8 +68,8 @@ export default function PhonesGrid() {
           delay: 1.6,
         }}
         className="phone"
-        src="/assets/apps/harwood.png"
-        alt="phone app"
+        src="/assets/apps/pearson.png"
+        alt="Pearson phone app"
       />
       <motion.img
         animate={{
@@ -81,8 +80,8 @@ export default function PhonesGrid() {
           repeatDelay: 1.2,
         }}
         className="phone"
-        src="/assets/apps/bookitin247.png"
-        alt="phone app"
+        src="/assets/apps/sam.png"
+        alt="SAM phone app"
       />
       <motion.img
         animate={{
@@ -94,7 +93,7 @@ export default function PhonesGrid() {
           delay: 0.5,
         }}
         className="phone"
-        src="/assets/apps/food_truck.png"
+        src="/assets/apps/farm.png"
         alt="phone app"
       />
       <motion.img
@@ -107,11 +106,11 @@ export default function PhonesGrid() {
           delay: 2.1,
         }}
         className="phone"
-        src="/assets/apps/openHomes.png"
-        alt="phone app"
+        src="/assets/apps/omega.png"
+        alt="Omega phone app"
       />
       <motion.img
-        className="nz-borders hidden lg:block"
+        className="nz-borders hidden lg:block z-10"
         src="/assets/nz_borders.png"
         alt="NZ"
       />

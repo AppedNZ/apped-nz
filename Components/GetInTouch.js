@@ -21,7 +21,7 @@ const contacts = [
 export default function GetInTouch() {
   return (
     <div className="my-container relative">
-      <img
+      {/* <img
         style={{ animationDelay: " 2.6s" }}
         className="bubble w-1/12 h-auto absolute top-0 right-4"
         src="/assets/bubble.svg"
@@ -42,9 +42,9 @@ export default function GetInTouch() {
       <img
         style={{ animationDelay: "1.4s" }}
         className="bubble w-1/8 h-auto absolute top-[55%] right-[-10px]"
-        src="/assets/bubble.svg"
+        src="/assets/b ubble.svg"
         alt="bubble"
-      />
+      /> */}
       <div className={GIT}>
         <div className={`${GIT}__contacts`}>
           <Heading>

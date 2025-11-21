@@ -1,7 +1,6 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import AboutUs from "../Components/AboutUs";
-import Bubbles from "../Components/Bubbles";
 import EasyToUseSection from "../Components/EasyToUseSection";
 import ExamplesSection from "../Components/ExamplesSection";
 import Footer from "../Components/Footer";
@@ -36,16 +35,22 @@ export default function Home() {
         <meta name="description" content="App Development" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Bubbles />
+      {/* <Bubbles /> */}
       <Header showMenu={showMenu} setShowMenu={setShowMenu} scrolled={scrolled} />
       <ModalContact showForm={showForm} setShowForm={setShowForm} />
       <ModalMenu showMenu={showMenu} setShowMenu={setShowMenu} />
       <div id="top" className="relative pt-[100px] overflow-hidden">
-        <img
+        <div
+          className="top-0 left-0 absolute w-full h-full object-cover z-0 pointer-events-none opacity-10"
+          style={{
+            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 10px, #0B8FFF 10px, #0B8FFF 20px);`,
+          }}></div>
+        <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-navy to-black/0"></div>
+        {/* <img
           className="top-0 left-0 absolute w-full h-full object-cover z-0 pointer-events-none"
           src="/assets/waves-pattern.png"
           alt="pattern"
-        />
+        /> */}
 
         <HeroSection setShowForm={setShowForm} />
         <AboutUs />

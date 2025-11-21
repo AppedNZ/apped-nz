@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
-import React from "react";
 import { useInView } from "react-intersection-observer";
 import Brief from "./Brief";
 import Heading from "./Heading";
 const OTC = "OurTrustedClients";
+const clients = [
+  { src: "/assets/clients/10.png", alt: "Wilson Contractors" },
+  { src: "/assets/clients/6.png", alt: "Clim Systems" },
+  { src: "/assets/clients/7.png", alt: "Giltrap Ag" },
+  { src: "/assets/clients/8.png", alt: "Huntmate" },
+  { src: "/assets/clients/9.png", alt: "Virotech" },
+];
 export default function OurTrustedClients() {
   const { ref, inView } = useInView({ threshold: 0.6 });
   const container = {
@@ -19,18 +25,6 @@ export default function OurTrustedClients() {
   const item = { show: { x: 0, opacity: 1 }, hidden: { x: -100, opacity: 0 } };
   return (
     <div className="my-container relative">
-      <img
-        style={{ animationDelay: "1.3s" }}
-        className="bubble w-1/12 h-auto absolute top-10 left-0"
-        src="/assets/bubble.svg"
-        alt="bubble"
-      />{" "}
-      <img
-        style={{ animationDelay: "2.3s" }}
-        className="bubble w-1/6 h-auto absolute top-[45%] right-0"
-        src="/assets/bubble.svg"
-        alt="bubble"
-      />{" "}
       <div className={OTC}>
         <Heading>
           <span className="text-blue">Trusted </span> by Clients
@@ -46,11 +40,9 @@ export default function OurTrustedClients() {
           initial="hidden"
           animate={inView ? "show" : "hidden"}
           className={`${OTC}__clients-grid`}>
-          <motion.img key={1} variants={item} src="/assets/clients/1.png" alt="Hello Sushi" />
-          <motion.img key={2} variants={item} src="/assets/clients/2.png" alt="Ourfffarm" />
-          <motion.img key={3} variants={item} src="/assets/clients/3.png" alt="Prawn Park" />
-          <motion.img key={4} variants={item} src="/assets/clients/4.png" alt="MainStream" />
-          <motion.img key={5} variants={item} src="/assets/clients/5.png" alt="NZ Hops" />
+          {clients.map((client) => (
+            <motion.img key={client.alt} variants={item} src={client.src} alt={client.alt} />
+          ))}
         </motion.div>
       </div>
     </div>
