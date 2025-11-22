@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 const GIT = "GetInTouch";
 export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
   const [name, setName] = useState("");
@@ -145,8 +145,12 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
           placeholder="What do you need the app to do?"
         />
       </div>
-      <button disabled={submitted} type="submit" className={`button-submit wide `}>
-        {submitted ? "Thank You:)" : "Get a quote"}
+      <button
+        style={{ maxWidth: "unset" }}
+        disabled={submitted}
+        type="submit"
+        className={`${!submitted ? "Button" : "button-submit "} wide `}>
+        <span> {submitted ? "Thank You:)" : "Get a quote"}</span>
       </button>
     </form>
   );

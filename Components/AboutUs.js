@@ -1,4 +1,3 @@
-import React from "react";
 import AboutUsTile from "./AboutUsTile";
 import Brief from "./Brief";
 import Heading from "./Heading";
@@ -53,7 +52,7 @@ export default function AboutUs() {
             />
             <br />
             <Brief
-              text={`We have a simple yet effective process for building our mobile apps which starts by designing a great UI/UX for approval, moving to development of the app and admin panel for iOS and Android, and approval of a backend admin panel in which you can manage all aspects of your project. 
+              text={`We have a simple yet effective process for building our mobile apps which starts by designing a great UI/UX for approval, moving to development of the app for iOS and Android, and approval of a backend admin panel in which you can manage all aspects of your project.
               `}
             />
           </div>

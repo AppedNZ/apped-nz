@@ -48,7 +48,10 @@ export default function GetInTouch() {
       <div className={GIT}>
         <div className={`${GIT}__contacts`}>
           <Heading>
-            Connect with <br /> <span className="text-blue">Our App Developers</span>
+            Connect with{" "}
+            <span className="text-blue">
+              Our <br /> App Development Team
+            </span>
           </Heading>
           <Brief
             text={`Get in touch with our app developers today by email or visit us in Tauranga, New Zealand. Let's bring your app idea to life!`}>

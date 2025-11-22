@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import AnimatedText from "./AnimatedText.js";
 import Brief from "./Brief";
 import Button from "./Button";
 import PhonesGrid from "./PhonesGrid";
@@ -19,8 +20,8 @@ export default function HeroSection({ setShowForm }) {
           <h1 className={`${HS}__heading`}>
             Looking for <br />
             an expert <br />
-            app developer
-            <br />
+            {/* app developer */}
+            <AnimatedText />
             <span className="text-blue">
               {" "}
               in New Zealand
@@ -29,8 +30,7 @@ export default function HeroSection({ setShowForm }) {
                 className="inline-block relative"
                 initial={{ scale: 1 }}
                 animate={inView ? { scale: 3, left: "10%", y: "-55%" } : { scale: 1 }}
-                transition={{ delay: 2.5 }}
-              >
+                transition={{ delay: 2.5 }}>
                 ?
               </motion.span>
             </span>

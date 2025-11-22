@@ -55,8 +55,8 @@ export default function PhonesGrid() {
           repeatDelay: 1.2,
         }}
         className="phone"
-        src="/assets/apps/enerpro.png"
-        alt="Enerpro phone app"
+        src="/assets/apps/pearson.png"
+        alt="Pearson phone app"
       />
       <motion.img
         animate={{
@@ -68,8 +68,8 @@ export default function PhonesGrid() {
           delay: 1.6,
         }}
         className="phone"
-        src="/assets/apps/pearson.png"
-        alt="Pearson phone app"
+        src="/assets/apps/enerpro.png"
+        alt="Enerpro phone app"
       />
       <motion.img
         animate={{

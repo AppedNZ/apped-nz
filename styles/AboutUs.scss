@@ -11,6 +11,7 @@
     align-items: center;
     color: white;
     padding: 24px 0;
+    border-radius: 8px;
     filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
     line-height: 1;
     .amount {
@@ -24,16 +25,16 @@
       font-weight: 600;
     }
     &.apps {
-      background-color: #96cfff;
+      background-color: #ff7f08;
     }
     &.customers {
-      background-color: #71beff;
+      background-color: #f88c26;
     }
     &.panels {
-      background-color: #1392ff;
+      background-color: #ffb775;
     }
     &.times {
-      background-color: #42a9ff;
+      background-color: #e17108;
     }
   }
   @media (min-width: 1024px) {
