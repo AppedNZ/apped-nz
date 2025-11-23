@@ -13,16 +13,20 @@ import "swiper/css/pagination";
 // import Swiper core and required modules
 const OTC = "OurTrustedClients";
 const clients = [
-  { src: "/assets/clients/1.png", alt: "Hello Sushi" },
-  { src: "/assets/clients/2.png", alt: "Ourfffarm" },
-  { src: "/assets/clients/3.png", alt: "Prawn Park" },
-  { src: "/assets/clients/4.png", alt: "MainStream" },
-  { src: "/assets/clients/5.png", alt: "NZ Hops" },
-  { src: "/assets/clients/6.png", alt: "Clim Systems" },
-  { src: "/assets/clients/7.png", alt: "Giltrap Ag" },
-  { src: "/assets/clients/8.png", alt: "Huntmate" },
-  { src: "/assets/clients/9.png", alt: "Virotech" },
-  { src: "/assets/clients/10.png", alt: "Wilson Contractors" },
+  { src: "/assets/clients/Clim_Systems_Logo.png", alt: "Clim Systems Logo" },
+  { src: "/assets/clients/Cooper_Young_Logo.png", alt: "Cooper Young Logo" },
+  { src: "/assets/clients/Enerpro_Logo.png", alt: "Enterpro Logo" },
+  { src: "/assets/clients/Giltrap_AG_Logo.png", alt: "Giltrap AG Logo" },
+  { src: "/assets/clients/Hunt_Mate_Logo.png", alt: "Hunt Mate Logo" },
+  { src: "/assets/clients/Hustler_Logo.png", alt: "Hustler Logo" },
+  { src: "/assets/clients/LOXnGO_Logo.png", alt: "LOXnGO Logo" },
+  { src: "/assets/clients/NZ_Enviro_Logo.png", alt: "NZ Enviro Logo" },
+  { src: "/assets/clients/Omega_Logo.png", alt: "Omega Logo" },
+  { src: "/assets/clients/Rata_Logo.png", alt: "Rata Logo" },
+  { src: "/assets/clients/SAM_Machinery_Logo.png", alt: "SAM Machinery Logo" },
+  { src: "/assets/clients/Swim_Legion_Logo.png", alt: "Swim Legion Logo" },
+  { src: "/assets/clients/Virotech_Logo.png", alt: "Virotech Logo" },
+  { src: "/assets/clients/Wilson_Contractors_Logo.png", alt: "Wilson Contractors Logo" },
 ];
 export default function OurTrustedClients() {
   const { ref, inView } = useInView({ threshold: 0.6 });
@@ -92,8 +96,9 @@ export default function OurTrustedClients() {
             spaceBetween={0}
             className="mySwiper flex">
             {clients.map((client) => (
-              <SwiperSlide key={client.alt} className="flex h-auto justify-center items-center">
+              <SwiperSlide key={client.alt} className="flex justify-center items-center">
                 <motion.img
+                  className="flex w-2/3 h-auto justify-center items-center"
                   animate={inView ? "show" : "hidden"}
                   variants={item}
                   src={client.src}

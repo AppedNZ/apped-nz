@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import React from "react";
 import { useInView } from "react-intersection-observer";
 import Brief from "./Brief";
 import Heading from "./Heading";
@@ -36,8 +35,7 @@ export default function Services() {
           initial="hidden"
           animate={inView ? "show" : "hidden"}
           id="services"
-          className={`${S}__services-grid`}
-        >
+          className={`${S}__services-grid`}>
           {services.map((service, i) => (
             <>
               <motion.div variants={item} className={`${S}__service`}>
@@ -51,7 +49,7 @@ export default function Services() {
           ))}
         </motion.div>
         <Brief
-          text={` Our app developer services include Custom Apps, App Products, App Hosting, and App Design. From initial design to app hosting, our app developers are equipped to handle every aspect with precision and care.
+          text={` Custom apps, smooth design, reliable hosting, and full development — all built under one roof. From idea to launch, we handle it end-to-end so your app works beautifully.
           `}
         />
       </div>

@@ -17,18 +17,31 @@
       transform: rotate(-3deg);
       &:nth-child(2n) {
         transform: rotate(3deg);
+
         .Tiles__tile {
           transform: scale(1.2) rotate(-9deg);
         }
+      }
+      .Tiles__backdrop {
+        opacity: 1;
       }
       .Tiles__tile {
         transform: scale(1.2) rotate(9deg);
       }
     }
   }
+  &__backdrop {
+    transition: all 0.3s;
+    opacity: 0;
+    span {
+      transition: all 0.3s;
+      transform: rotate(3deg);
+    }
+  }
   &__tile {
     position: absolute;
-    width: 100%;
+    width: 102%;
+    max-width: unset;
     height: 100%;
     object-fit: cover;
     transition: 0.3s;

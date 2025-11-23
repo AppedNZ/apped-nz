@@ -33,7 +33,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
           }}></noscript>
         <Main />
         <NextScript />
-        {/* <script
+        <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `
@@ -48,7 +48,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
                 })();
               `,
           }}
-        /> */}
+        />
       </body>
     </Html>
   );

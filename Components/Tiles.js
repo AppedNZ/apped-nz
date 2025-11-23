@@ -1,4 +1,3 @@
-import React from "react";
 const tiles = [
   "/assets/tiles/1.jpg",
   "/assets/tiles/2.jpg",
@@ -25,7 +24,7 @@ export default function Tiles() {
   return (
     <div className="Tiles">
       {tiles.map((tile, i) => (
-        <div key={i} className="Tiles__wrap">
+        <div key={i} className="Tiles__wrap group">
           <img className="Tiles__tile" src={tile} alt="App example" />
         </div>
       ))}

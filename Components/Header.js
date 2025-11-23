@@ -65,10 +65,14 @@ export default function Header({ scrolled, showMenu, setShowMenu }) {
               className="client uppercase leading-none py-2.5 px-4 bg-blue text-white font-bold">
               client area
             </a>
-            <a className="leading-none text-base phone relative" href="mailto:hello@apped.nz">
-              <span className="number">hello@apped.nz</span>{" "}
-              {/* <img className="phone-icon" src="/assets/email.svg" alt="send email" /> */}
-            </a>{" "}
+            {scrolled ? (
+              <a className="leading-none text-base phone relative" href="mailto:hello@apped.nz">
+                <span className="number">hello@apped.nz</span>{" "}
+                {/* <img className="phone-icon" src="/assets/email.svg" alt="send email" /> */}
+              </a>
+            ) : (
+              ""
+            )}
             {scrolled ? (
               <a className="leading-none text-base phone relative" href="tel:+640211695214">
                 <span className="number"> 021 169 5214</span>{" "}

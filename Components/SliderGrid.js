@@ -12,26 +12,18 @@ import SwiperCore, { Grid, Navigation, Pagination } from "swiper";
 
 SwiperCore.use([Grid, Pagination, Navigation]);
 const tiles = [
-  "/assets/tiles/1.jpg",
-  "/assets/tiles/2.jpg",
-  "/assets/tiles/3.jpg",
-  "/assets/tiles/4.jpg",
-  "/assets/tiles/5.jpg",
-  "/assets/tiles/6.jpg",
-  "/assets/tiles/7.jpg",
-  "/assets/tiles/8.jpg",
-  "/assets/tiles/9.jpg",
-  "/assets/tiles/10.jpg",
-  "/assets/tiles/11.jpg",
-  "/assets/tiles/12.jpg",
-  // "/assets/tiles/13.jpg",
-  // "/assets/tiles/14.jpg",
-  // "/assets/tiles/15.jpg",
-  // "/assets/tiles/16.jpg",
-  // "/assets/tiles/17.jpeg",
-  // "/assets/tiles/18.jpeg",
-  // "/assets/tiles/19.jpeg",
-  // "/assets/tiles/20.jpeg",
+  { src: "/assets/tiles/1.jpg", alt: "INTA-WOOD FORESTRY" },
+  { src: "/assets/tiles/2.jpg", alt: "LOX N GO" },
+  { src: "/assets/tiles/3.jpg", alt: "KTA" },
+  { src: "/assets/tiles/4.jpg", alt: "OMEGA WINDOWS" },
+  { src: "/assets/tiles/5.jpg", alt: "AD LIBRARY" },
+  { src: "/assets/tiles/6.jpg", alt: "COBBLE KINGS" },
+  { src: "/assets/tiles/7.jpg", alt: "HUNT MATE" },
+  { src: "/assets/tiles/8.jpg", alt: "HUSTLER EQUIPMENT" },
+  { src: "/assets/tiles/9.jpg", alt: "VIROTECH" },
+  { src: "/assets/tiles/10.jpg", alt: "Cooper Young" },
+  { src: "/assets/tiles/11.jpg", alt: "SWIM LEGION" },
+  { src: "/assets/tiles/12.jpg", alt: "GILTRAP AGRIZONE" },
 ];
 export default function SliderGrid() {
   const [sliderProps, setSlideProps] = useState({ slidesPerView: 2, rows: 3 });
@@ -92,8 +84,11 @@ export default function SliderGrid() {
         {tiles.map((tile, i) => (
           <SwiperSlide key={i}>
             <div className="p-2.5">
-              <div className="Tiles__wrap ">
-                <img className="Tiles__tile" src={tile} alt="App example" />
+              <div className="Tiles__wrap relative group">
+                <div className="Tiles__backdrop absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-black bg-opacity-60 z-10 flex justify-center items-center">
+                  <span className="font-bold  text-lg text-white text-center">{tile.alt}</span>
+                </div>
+                <img className="Tiles__tile" src={tile.src} alt={tile.src} />
               </div>
             </div>
           </SwiperSlide>
