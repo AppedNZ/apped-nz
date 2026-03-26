@@ -87,6 +87,7 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
     {
       icon: "/assets/inputs/phone.svg",
       inputProps: {
+        className: "wide",
         name: "phone",
         type: "text",
         required: true,
@@ -106,13 +107,13 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
       }}
       className={`${GIT}__contact-form relative`}>
       {inputs.map((input) => (
-        <div key={input.inputProps.name} className="inputWrapper">
+        <div key={input.inputProps.name} className={`inputWrapper ${input.inputProps?.className}`}>
           <input {...input.inputProps} />
           <img src={input.icon} alt={input.inputProps.name} />
         </div>
       ))}
 
-      <div className="inputWrapper">
+      {/* <div className="inputWrapper">
         <img src="/assets/inputs/budget.svg" alt="budget" />
         <select
           required
@@ -133,7 +134,7 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
           <option value="$50K to $100K">$50K to $100K</option>
           <option value="More than $100K">More than $100K</option>
         </select>
-      </div>
+      </div> */}
       <div className="inputWrapper w-full comment wide">
         <textarea
           value={message}
