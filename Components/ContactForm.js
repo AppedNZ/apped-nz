@@ -17,6 +17,7 @@ export default function ContactForm({ onSubmit = () => {}, addID = "" }) {
     let data = {
       name,
       email,
+      phone,
       budget,
       message,
     };

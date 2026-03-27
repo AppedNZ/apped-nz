@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   const emailjs = require("@emailjs/nodejs");
-  const { name, email, budget, message } = req?.body || {};
+  const { name, email, budget, message, phone } = req?.body || {};
   var data = {
     service_id: process.env.SERVICE_ID,
     template_id: process.env.TEMPLATE_ID,
@@ -9,8 +9,9 @@ export default async function handler(req, res) {
   const templateParams = {
     name,
     email,
-    budget,
+    //budget,
     message,
+    phone,
   };
   let result;
   await emailjs
@@ -28,7 +29,7 @@ export default async function handler(req, res) {
         console.log("FAILED...", err);
         result = err;
         res.json({ done: false, err });
-      }
+      },
     );
 
   console.log("AFTER", result);
