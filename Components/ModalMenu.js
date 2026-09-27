@@ -49,8 +49,8 @@ export default function ModalMenu({ showMenu = true, setShowMenu }) {
         client area
       </a>
 
-      <a className="leading-none text-base " href="tel:+640211695214">
-        <span className="number"> 021 169 5214</span>{" "}
+      <a className="leading-none text-base " href="tel:+6421438043">
+        <span className="number"> 021 438 043</span>{" "}
       </a>
 
       <Socials />
