@@ -6,8 +6,8 @@ const contacts = [
   {
     icon: "/assets/phone.svg",
     type: "phone",
-    href: `tel:+640211695214`,
-    text: "021 169 5214",
+    href: `tel:+6421438043`,
+    text: "021 438 043",
   },
   {
     icon: "/assets/email.svg",
